@@ -1,2 +1,2 @@
-# PatkKit
+# PathKit
 Bezier Path manipulation Library
