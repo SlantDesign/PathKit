@@ -1,10 +1,9 @@
+//// Copyright © 2019 JABT Labs. All rights reserved.
 //
-//  PathKit.h
-//  PathKit
-//
-//  Created by Jeremie Benhamron on 2019-01-22.
-//  Copyright © 2019 jabt. All rights reserved.
-//
+// This file is part of PathKit. The full PathKit copyright notice,
+// including terms governing use, modification, and redistribution, is
+// contained in the file LICENSE at the root of the source code distribution
+// tree.
 
 #import <Cocoa/Cocoa.h>
 
