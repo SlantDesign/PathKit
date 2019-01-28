@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A6F885C221F79C6700FFC5A1 /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F885C021F79C6700FFC5A1 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
+		A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A6F885BD21F79C6700FFC5A1 /* PathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F885C021F79C6700FFC5A1 /* PathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit.h; sourceTree = "<group>"; };
 		A6F885C121F79C6700FFC5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FE5B6C21FAAFF1009CD767 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		A6FE5B6E21FAB1A8009CD767 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,8 +35,8 @@
 			isa = PBXGroup;
 			children = (
 				A6F885C821F79CA800FFC5A1 /* MetaData */,
-				A6F885BF21F79C6700FFC5A1 /* PathKit */,
 				A6F885BE21F79C6700FFC5A1 /* Products */,
+				A6FE5B6B21FAAFCB009CD767 /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				A6F885C021F79C6700FFC5A1 /* PathKit.h */,
+				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
+				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
 			);
 			path = PathKit;
 			sourceTree = "<group>";
@@ -58,6 +64,14 @@
 				A6F885C121F79C6700FFC5A1 /* Info.plist */,
 			);
 			path = MetaData;
+			sourceTree = "<group>";
+		};
+		A6FE5B6B21FAAFCB009CD767 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6F885BF21F79C6700FFC5A1 /* PathKit */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */,
+				A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
