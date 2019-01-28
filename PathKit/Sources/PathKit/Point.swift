@@ -46,6 +46,55 @@ extension Point {
         self.x = Double(x)
         self.y = Double(y)
     }
+
+    /// Ceeates a point located at the head of `vector`.
+    ///
+    /// - Parameter vector: The vector used to create the point.
+    public init(_ vector: Vector) {
+        self.init()
+        x = vector.dx
+        y = vector.dy
+    }
+}
+
+public extension Point {
+    public static func + (lhs: Point, rhs: Vector) -> Point {
+        return Point(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
+    }
+
+    public static func - (lhs: Point, rhs: Point) -> Vector {
+        return Vector(dx: lhs.x - rhs.x, dy: lhs.y - rhs.y)
+    }
+
+    public static func - (lhs: Point, rhs: Vector) -> Point {
+        return Point(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
+    }
+
+    public static func * (lhs: Point, rhs: Double) -> Point {
+        return Point(x: lhs.x * rhs, y: lhs.y * rhs)
+    }
+
+    public static func * (lhs: Double, rhs: Point) -> Point {
+        return Point(x: rhs.x * lhs, y: rhs.y * lhs)
+    }
+
+    public static func / (lhs: Point, rhs: Double) -> Point {
+        return Point(x: lhs.x / rhs, y: lhs.y / rhs)
+    }
+
+    public static prefix func - (point: Point) -> Point {
+        return Point(x: -point.x, y: -point.y)
+    }
+
+    public static func += (lhs: inout Point, rhs: Vector) {
+        lhs.x += rhs.dx
+        lhs.y += rhs.dy
+    }
+
+    public static func -= (lhs: inout Point, rhs: Vector) {
+        lhs.x -= rhs.dx
+        lhs.y -= rhs.dy
+    }
 }
 
 extension Point : CustomDebugStringConvertible {
@@ -54,4 +103,19 @@ extension Point : CustomDebugStringConvertible {
     public var debugDescription: String {
         return "Point(\(x), \(y))"
     }
+}
+
+/// Point Linear interpolation.
+public func lerp(_ lhs: Point, _ rhs: Point, at t: Double) -> Point {
+    return lhs + (rhs - lhs) * t
+}
+
+/// Computes the euclidean distance between two points.
+public func distance(_ a: Point, _ b: Point) -> Double {
+    return (b - a).length
+}
+
+/// Computes the square of the euclidean distance between two points.
+public func distanceSq(_ a: Point, _ b: Point) -> Double {
+    return (b - a).lengthSquared
 }
