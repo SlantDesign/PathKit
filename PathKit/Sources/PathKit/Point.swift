@@ -10,10 +10,10 @@ import Foundation
 /// A data structure used to represnet a point in 2-dimensional Cartesian coordinate system.
 /// The components of the point are represented using double precision floating points.
 public struct Point: Equatable {
-    /// The x-component of the point.
+    /// The x-coordinate of the point.
     public var x: Double
 
-    /// The y-component of the point.
+    /// The y-coordinate of the point.
     public var y: Double
 
     /// Creates a point at the origin.

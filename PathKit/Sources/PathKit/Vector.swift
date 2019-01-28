@@ -112,7 +112,7 @@ public extension Vector {
 
     /// Returns the inverse vector of `self`.
     public static prefix func - (vector: Vector) -> Vector {
-        return -1 * vector
+        return Vector(dx: -vector.dx, dy: -vector.dy)
     }
 
     public static func += (lhs: inout Vector, rhs: Vector) {
@@ -135,12 +135,12 @@ public extension Vector {
         lhs.dy /= rhs
     }
 
-    /// Returns the vector's magnitude.
+    /// Returns the vector's length.
     public var length: Double {
         return hypot(dx, dy)
     }
 
-    /// Returns the vector's magnitude squared.
+    /// Returns the square of the vector's length.
     public var lengthSquared: Double {
         return self • self
     }
