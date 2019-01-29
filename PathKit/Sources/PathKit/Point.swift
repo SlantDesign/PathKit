@@ -48,10 +48,45 @@ extension Point {
     }
 }
 
+public extension Point {
+    public static func + (lhs: Point, rhs: Vector) -> Point {
+        return Point(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
+    }
+
+    public static func - (lhs: Point, rhs: Vector) -> Point {
+        return Point(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
+    }
+
+    public static func += (lhs: inout Point, rhs: Vector) {
+        lhs.x += rhs.dx
+        lhs.y += rhs.dy
+    }
+
+    public static func -= (lhs: inout Point, rhs: Vector) {
+        lhs.x -= rhs.dx
+        lhs.y -= rhs.dy
+    }
+}
+
 extension Point : CustomDebugStringConvertible {
 
     /// A textual representation of this instance, suitable for debugging.
     public var debugDescription: String {
         return "Point(\(x), \(y))"
     }
+}
+
+/// Point Linear interpolation.
+public func lerp(_ lhs: Point, _ rhs: Point, at t: Double) -> Point {
+    return lhs + Vector(head: rhs, tail: lhs) * t
+}
+
+/// Computes the Euclidean distance between two points.
+public func distance(_ a: Point, _ b: Point) -> Double {
+    return Vector(head: b, tail: a).length
+}
+
+/// Computes the square of the Euclidean distance between two points.
+public func squareDistance(_ a: Point, _ b: Point) -> Double {
+    return Vector(head: b, tail: a).lengthSquared
 }

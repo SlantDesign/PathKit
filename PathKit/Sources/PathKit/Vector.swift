@@ -50,12 +50,14 @@ extension Vector {
         self.dy = Double(dy)
     }
 
-    /// Creates a vector pointing to `point`.
+    /// Creates a vector pointing from `tail` to `head`.
     ///
-    /// - Parameter point: The point used to create the vector.
-    public init(_ point: Point) {
-        dx = point.x
-        dy = point.y
+    /// - Parameters:
+    ///   - head: The point representing the head of the vector.
+    ///   - tail: The point representing the tail of the vector.
+    public init(head: Point, tail: Point) {
+        dx = head.x - tail.x
+        dy = head.y - tail.y
     }
 }
 
