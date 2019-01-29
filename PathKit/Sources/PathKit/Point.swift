@@ -46,15 +46,6 @@ extension Point {
         self.x = Double(x)
         self.y = Double(y)
     }
-
-    /// Ceeates a point located at the head of `vector`.
-    ///
-    /// - Parameter vector: The vector used to create the point.
-    public init(_ vector: Vector) {
-        self.init()
-        x = vector.dx
-        y = vector.dy
-    }
 }
 
 public extension Point {
@@ -87,15 +78,15 @@ extension Point : CustomDebugStringConvertible {
 
 /// Point Linear interpolation.
 public func lerp(_ lhs: Point, _ rhs: Point, at t: Double) -> Point {
-    return lhs + Vector(tail: lhs, head: rhs) * t
+    return lhs + Vector(head: rhs, tail: lhs) * t
 }
 
 /// Computes the Euclidean distance between two points.
 public func distance(_ a: Point, _ b: Point) -> Double {
-    return Vector(tail: a, head: b).length
+    return Vector(head: b, tail: a).length
 }
 
 /// Computes the square of the Euclidean distance between two points.
 public func squareDistance(_ a: Point, _ b: Point) -> Double {
-    return Vector(tail: a, head: b).lengthSquared
+    return Vector(head: b, tail: a).lengthSquared
 }
