@@ -62,28 +62,8 @@ public extension Point {
         return Point(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
     }
 
-    public static func - (lhs: Point, rhs: Point) -> Vector {
-        return Vector(dx: lhs.x - rhs.x, dy: lhs.y - rhs.y)
-    }
-
     public static func - (lhs: Point, rhs: Vector) -> Point {
         return Point(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
-    }
-
-    public static func * (lhs: Point, rhs: Double) -> Point {
-        return Point(x: lhs.x * rhs, y: lhs.y * rhs)
-    }
-
-    public static func * (lhs: Double, rhs: Point) -> Point {
-        return Point(x: rhs.x * lhs, y: rhs.y * lhs)
-    }
-
-    public static func / (lhs: Point, rhs: Double) -> Point {
-        return Point(x: lhs.x / rhs, y: lhs.y / rhs)
-    }
-
-    public static prefix func - (point: Point) -> Point {
-        return Point(x: -point.x, y: -point.y)
     }
 
     public static func += (lhs: inout Point, rhs: Vector) {
@@ -107,15 +87,15 @@ extension Point : CustomDebugStringConvertible {
 
 /// Point Linear interpolation.
 public func lerp(_ lhs: Point, _ rhs: Point, at t: Double) -> Point {
-    return lhs + (rhs - lhs) * t
+    return lhs + Vector(tail: lhs, head: rhs) * t
 }
 
-/// Computes the euclidean distance between two points.
+/// Computes the Euclidean distance between two points.
 public func distance(_ a: Point, _ b: Point) -> Double {
-    return (b - a).length
+    return Vector(tail: a, head: b).length
 }
 
-/// Computes the square of the euclidean distance between two points.
-public func distanceSq(_ a: Point, _ b: Point) -> Double {
-    return (b - a).lengthSquared
+/// Computes the square of the Euclidean distance between two points.
+public func squareDistance(_ a: Point, _ b: Point) -> Double {
+    return Vector(tail: a, head: b).lengthSquared
 }

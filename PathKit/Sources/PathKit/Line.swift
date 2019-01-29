@@ -14,7 +14,7 @@ public struct LineSegment {
     /// The endpoint of `self`.
     public var end: Point
 
-    /// The euclidian distance from `start` to `end`.
+    /// The Euclidean distance from `start` to `end`.
     public var length: Double {
         return distance(start, end)
     }
