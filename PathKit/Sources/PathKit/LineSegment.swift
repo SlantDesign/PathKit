@@ -35,5 +35,14 @@ public struct LineSegment {
     public init(start: Point, end: Point) {
         self.start = start
         self.end = start
+
+    }
+
+    /// The line containing the line segment.
+    var line: Line {
+        // TODO: Implement
+        let 𝜭 =
+        let p =
+        return Line(𝜭: 𝜭, p: p)
     }
 }

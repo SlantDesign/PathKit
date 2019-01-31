@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F71186122036DF200FA51A8 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71186022036DF200FA51A8 /* Line.swift */; };
+		9F7118632203739700FA51A8 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7118622203739700FA51A8 /* Intersection.swift */; };
 		A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6391FB521FE8B3100CFF71C /* LineSegment.swift */; };
 		A6F885C221F79C6700FFC5A1 /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F885C021F79C6700FFC5A1 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F71186022036DF200FA51A8 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		9F7118622203739700FA51A8 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A6F885BD21F79C6700FFC5A1 /* PathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F885C021F79C6700FFC5A1 /* PathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit.h; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
 				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
+				9F71186022036DF200FA51A8 /* Line.swift */,
+				9F7118622203739700FA51A8 /* Intersection.swift */,
 			);
 			path = PathKit;
 			sourceTree = "<group>";
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */,
+				9F71186122036DF200FA51A8 /* Line.swift in Sources */,
 				A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */,
+				9F7118632203739700FA51A8 /* Intersection.swift in Sources */,
 				A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
