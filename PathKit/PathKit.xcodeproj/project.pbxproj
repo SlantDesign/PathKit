@@ -60,12 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				A6F885C021F79C6700FFC5A1 /* PathKit.h */,
+				A60AA41B220A07B10041C676 /* Angle.swift */,
+				A60AA419220A06410041C676 /* Intersection.swift */,
+				A60AA41D220A0D950041C676 /* Line.swift */,
+				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
 				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
 				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
-				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
-				A60AA419220A06410041C676 /* Intersection.swift */,
-				A60AA41B220A07B10041C676 /* Angle.swift */,
-				A60AA41D220A0D950041C676 /* Line.swift */,
 			);
 			path = PathKit;
 			sourceTree = "<group>";
