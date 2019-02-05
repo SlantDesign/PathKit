@@ -19,10 +19,10 @@ public struct LineSegment {
         return distance(start, end)
     }
 
-    /// Evaluates the line at the given parameter value `t`.
+    /// Returns a point along the line passing through `self` using point linear interpolation.
     ///
-    /// - Parameter t: A value between 0 and 1.
-    /// - Returns: The point
+    /// - Parameter t: The interpolation parameter used to calculate the point.
+    /// - Returns: A point along the line passing through `self`.
     public func point(at t: Double) -> Point {
         return lerp(start, end, at: t)
     }
