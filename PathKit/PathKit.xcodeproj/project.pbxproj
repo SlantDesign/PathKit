@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6391FB521FE8B3100CFF71C /* LineSegment.swift */; };
 		A60AA41A220A06410041C676 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA419220A06410041C676 /* Intersection.swift */; };
 		A60AA41C220A07B10041C676 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41B220A07B10041C676 /* Angle.swift */; };
+		A60AA41E220A0D950041C676 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41D220A0D950041C676 /* Line.swift */; };
+		A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6391FB521FE8B3100CFF71C /* LineSegment.swift */; };
 		A6F885C221F79C6700FFC5A1 /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F885C021F79C6700FFC5A1 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A6F885BD21F79C6700FFC5A1 /* PathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F885C021F79C6700FFC5A1 /* PathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit.h; sourceTree = "<group>"; };
 		A6F885C121F79C6700FFC5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
 				A60AA41B220A07B10041C676 /* Angle.swift */,
+				A60AA41D220A0D950041C676 /* Line.swift */,
 			);
 			path = PathKit;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */,
 				A60AA41A220A06410041C676 /* Intersection.swift in Sources */,
 				A60AA41C220A07B10041C676 /* Angle.swift in Sources */,
+				A60AA41E220A0D950041C676 /* Line.swift in Sources */,
 				A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */,
 				A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */,
 			);
