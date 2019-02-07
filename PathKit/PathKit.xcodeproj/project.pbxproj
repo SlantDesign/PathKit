@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6391FB521FE8B3100CFF71C /* LineSegment.swift */; };
 		A60AA41A220A06410041C676 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA419220A06410041C676 /* Intersection.swift */; };
 		A60AA41C220A07B10041C676 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41B220A07B10041C676 /* Angle.swift */; };
+		A60AA47E220BFCC10041C676 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
+		A60AA480220BFCC10041C676 /* PathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F885BD21F79C6700FFC5A1 /* PathKit.framework */; };
+		A6391FB621FE8B3100CFF71C /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6391FB521FE8B3100CFF71C /* LineSegment.swift */; };
 		A6F885C221F79C6700FFC5A1 /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F885C021F79C6700FFC5A1 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FE5B6D21FAAFF1009CD767 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		A6FE5B6F21FAB1A8009CD767 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A60AA481220BFCC10041C676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F885B421F79C6700FFC5A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6F885BC21F79C6700FFC5A1;
+			remoteInfo = PathKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		A60AA47B220BFCC10041C676 /* PathKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60AA47D220BFCC10041C676 /* VectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTests.swift; sourceTree = "<group>"; };
+		A60AA47F220BFCC10041C676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A6F885BD21F79C6700FFC5A1 /* PathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F885C021F79C6700FFC5A1 /* PathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit.h; sourceTree = "<group>"; };
 		A6F885C121F79C6700FFC5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +42,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A60AA478220BFCC10041C676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60AA480220BFCC10041C676 /* PathKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F885BA21F79C6700FFC5A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,12 +60,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A60AA47C220BFCC10041C676 /* PathKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A60AA47D220BFCC10041C676 /* VectorTests.swift */,
+				A60AA47F220BFCC10041C676 /* Info.plist */,
+			);
+			path = PathKitTests;
+			sourceTree = "<group>";
+		};
+		A60AA486220BFD640041C676 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A60AA47C220BFCC10041C676 /* PathKitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		A6F885B321F79C6700FFC5A1 = {
 			isa = PBXGroup;
 			children = (
 				A6F885C821F79CA800FFC5A1 /* MetaData */,
 				A6F885BE21F79C6700FFC5A1 /* Products */,
 				A6FE5B6B21FAAFCB009CD767 /* Sources */,
+				A60AA486220BFD640041C676 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F885BD21F79C6700FFC5A1 /* PathKit.framework */,
+				A60AA47B220BFCC10041C676 /* PathKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +139,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A60AA47A220BFCC10041C676 /* PathKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60AA485220BFCC10041C676 /* Build configuration list for PBXNativeTarget "PathKitTests" */;
+			buildPhases = (
+				A60AA477220BFCC10041C676 /* Sources */,
+				A60AA478220BFCC10041C676 /* Frameworks */,
+				A60AA479220BFCC10041C676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A60AA482220BFCC10041C676 /* PBXTargetDependency */,
+			);
+			name = PathKitTests;
+			productName = PathKitTests;
+			productReference = A60AA47B220BFCC10041C676 /* PathKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A6F885BC21F79C6700FFC5A1 /* PathKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6F885C521F79C6700FFC5A1 /* Build configuration list for PBXNativeTarget "PathKit" */;
@@ -121,9 +181,13 @@
 		A6F885B421F79C6700FFC5A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "JABT Labs";
 				TargetAttributes = {
+					A60AA47A220BFCC10041C676 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					A6F885BC21F79C6700FFC5A1 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -143,11 +207,19 @@
 			projectRoot = "";
 			targets = (
 				A6F885BC21F79C6700FFC5A1 /* PathKit */,
+				A60AA47A220BFCC10041C676 /* PathKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A60AA479220BFCC10041C676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F885BB21F79C6700FFC5A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +230,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A60AA477220BFCC10041C676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60AA47E220BFCC10041C676 /* VectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F885B921F79C6700FFC5A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,7 +252,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A60AA482220BFCC10041C676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6F885BC21F79C6700FFC5A1 /* PathKit */;
+			targetProxy = A60AA481220BFCC10041C676 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A60AA483220BFCC10041C676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = Tests/PathKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jabt.PathKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		A60AA484220BFCC10041C676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = Tests/PathKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jabt.PathKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		A6F885C321F79C6700FFC5A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -352,6 +476,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A60AA485220BFCC10041C676 /* Build configuration list for PBXNativeTarget "PathKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60AA483220BFCC10041C676 /* Debug */,
+				A60AA484220BFCC10041C676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6F885B721F79C6700FFC5A1 /* Build configuration list for PBXProject "PathKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
