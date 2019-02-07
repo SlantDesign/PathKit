@@ -1,0 +1,5 @@
+os: osx
+language: swift
+xcode_project: PathKit/PathKit.xcodeproj
+xcode_scheme: PathKit
+xcode_destination: platform=macOS
