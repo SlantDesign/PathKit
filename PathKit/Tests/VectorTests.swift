@@ -6,7 +6,6 @@
 // tree.
 
 import XCTest
-import PathKit
 
 class VectorTests: XCTestCase {
 
