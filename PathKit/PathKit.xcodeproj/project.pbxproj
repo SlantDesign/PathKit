@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9FE96117220D596700D5F0A9 /* PathKit_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE9610E220D596700D5F0A9 /* PathKit_OSX.framework */; };
-		9FE9611E220D596700D5F0A9 /* PathKit_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FE9611E220D596700D5F0A9 /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FE96125220D598700D5F0A9 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41B220A07B10041C676 /* Angle.swift */; };
 		9FE96126220D598700D5F0A9 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA419220A06410041C676 /* Intersection.swift */; };
 		9FE96127220D598700D5F0A9 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41D220A0D950041C676 /* Line.swift */; };
@@ -23,7 +23,6 @@
 		9FE96130220D598800D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE96131220D599100D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
 		9FE96140220D59CD00D5F0A9 /* PathKit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE96137220D59CD00D5F0A9 /* PathKit_tvOS.framework */; };
-		9FE96147220D59CD00D5F0A9 /* PathKit_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96139220D59CD00D5F0A9 /* PathKit_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FE9614E220D59ED00D5F0A9 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41B220A07B10041C676 /* Angle.swift */; };
 		9FE9614F220D59ED00D5F0A9 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA419220A06410041C676 /* Intersection.swift */; };
 		9FE96150220D59ED00D5F0A9 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41D220A0D950041C676 /* Line.swift */; };
@@ -38,7 +37,6 @@
 		9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE9615A220D59F100D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
 		9FE96176220D5AF600D5F0A9 /* PathKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */; };
-		9FE9617D220D5AF600D5F0A9 /* PathKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE9616F220D5AF600D5F0A9 /* PathKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FE96184220D5AFB00D5F0A9 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41B220A07B10041C676 /* Angle.swift */; };
 		9FE96185220D5AFB00D5F0A9 /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA419220A06410041C676 /* Intersection.swift */; };
 		9FE96186220D5AFB00D5F0A9 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA41D220A0D950041C676 /* Line.swift */; };
@@ -52,6 +50,7 @@
 		9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
+		A6FE425E221A0645007639FD /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,14 +79,12 @@
 
 /* Begin PBXFileReference section */
 		9FE9610E220D596700D5F0A9 /* PathKit_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE96110220D596700D5F0A9 /* PathKit_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_OSX.h; sourceTree = "<group>"; };
+		9FE96110220D596700D5F0A9 /* PathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit.h; sourceTree = "<group>"; };
 		9FE96116220D596700D5F0A9 /* PathKit_OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9611D220D596700D5F0A9 /* TestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestsInfo.plist; sourceTree = "<group>"; };
 		9FE96137220D59CD00D5F0A9 /* PathKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE96139220D59CD00D5F0A9 /* PathKit_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_tvOS.h; sourceTree = "<group>"; };
 		9FE9613F220D59CD00D5F0A9 /* PathKit_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE9616F220D5AF600D5F0A9 /* PathKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_iOS.h; sourceTree = "<group>"; };
 		9FE96175220D5AF600D5F0A9 /* PathKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
@@ -148,30 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9FE9610F220D596700D5F0A9 /* PathKit_OSX */ = {
-			isa = PBXGroup;
-			children = (
-				9FE96110220D596700D5F0A9 /* PathKit_OSX.h */,
-			);
-			path = PathKit_OSX;
-			sourceTree = "<group>";
-		};
-		9FE96138220D59CD00D5F0A9 /* PathKit_tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				9FE96139220D59CD00D5F0A9 /* PathKit_tvOS.h */,
-			);
-			path = PathKit_tvOS;
-			sourceTree = "<group>";
-		};
-		9FE9616E220D5AF600D5F0A9 /* PathKit_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9FE9616F220D5AF600D5F0A9 /* PathKit_iOS.h */,
-			);
-			path = PathKit_iOS;
-			sourceTree = "<group>";
-		};
 		A60AA486220BFD640041C676 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,9 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				A6F885C821F79CA800FFC5A1 /* MetaData */,
-				9FE9610F220D596700D5F0A9 /* PathKit_OSX */,
-				9FE96138220D59CD00D5F0A9 /* PathKit_tvOS */,
-				9FE9616E220D5AF600D5F0A9 /* PathKit_iOS */,
 				A6F885BE21F79C6700FFC5A1 /* Products */,
 				A6FE5B6B21FAAFCB009CD767 /* Sources */,
 				A60AA486220BFD640041C676 /* Tests */,
@@ -218,6 +188,7 @@
 		A6FE5B6B21FAAFCB009CD767 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9FE96110220D596700D5F0A9 /* PathKit.h */,
 				A60AA41B220A07B10041C676 /* Angle.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
 				A60AA41D220A0D950041C676 /* Line.swift */,
@@ -235,7 +206,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE9611E220D596700D5F0A9 /* PathKit_OSX.h in Headers */,
+				9FE9611E220D596700D5F0A9 /* PathKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +214,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE96147220D59CD00D5F0A9 /* PathKit_tvOS.h in Headers */,
+				A6FE425E221A0645007639FD /* PathKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +222,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE9617D220D5AF600D5F0A9 /* PathKit_iOS.h in Headers */,
+				A6FE425F221A0649007639FD /* PathKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
