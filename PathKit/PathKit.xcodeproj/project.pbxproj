@@ -81,19 +81,14 @@
 /* Begin PBXFileReference section */
 		9FE9610E220D596700D5F0A9 /* PathKit_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE96110220D596700D5F0A9 /* PathKit_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_OSX.h; sourceTree = "<group>"; };
-		9FE96111220D596700D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE96116220D596700D5F0A9 /* PathKit_OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE9611D220D596700D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE9611D220D596700D5F0A9 /* TestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestsInfo.plist; sourceTree = "<group>"; };
 		9FE96137220D59CD00D5F0A9 /* PathKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE96139220D59CD00D5F0A9 /* PathKit_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_tvOS.h; sourceTree = "<group>"; };
-		9FE9613A220D59CD00D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE9613F220D59CD00D5F0A9 /* PathKit_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE96146220D59CD00D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9616F220D5AF600D5F0A9 /* PathKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathKit_iOS.h; sourceTree = "<group>"; };
-		9FE96170220D5AF600D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE96175220D5AF600D5F0A9 /* PathKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE9617C220D5AF600D5F0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -157,51 +152,24 @@
 			isa = PBXGroup;
 			children = (
 				9FE96110220D596700D5F0A9 /* PathKit_OSX.h */,
-				9FE96111220D596700D5F0A9 /* Info.plist */,
 			);
 			path = PathKit_OSX;
-			sourceTree = "<group>";
-		};
-		9FE9611A220D596700D5F0A9 /* PathKit_OSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				9FE9611D220D596700D5F0A9 /* Info.plist */,
-			);
-			path = PathKit_OSXTests;
 			sourceTree = "<group>";
 		};
 		9FE96138220D59CD00D5F0A9 /* PathKit_tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				9FE96139220D59CD00D5F0A9 /* PathKit_tvOS.h */,
-				9FE9613A220D59CD00D5F0A9 /* Info.plist */,
 			);
 			path = PathKit_tvOS;
-			sourceTree = "<group>";
-		};
-		9FE96143220D59CD00D5F0A9 /* PathKit_tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				9FE96146220D59CD00D5F0A9 /* Info.plist */,
-			);
-			path = PathKit_tvOSTests;
 			sourceTree = "<group>";
 		};
 		9FE9616E220D5AF600D5F0A9 /* PathKit_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				9FE9616F220D5AF600D5F0A9 /* PathKit_iOS.h */,
-				9FE96170220D5AF600D5F0A9 /* Info.plist */,
 			);
 			path = PathKit_iOS;
-			sourceTree = "<group>";
-		};
-		9FE96179220D5AF600D5F0A9 /* PathKit_iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				9FE9617C220D5AF600D5F0A9 /* Info.plist */,
-			);
-			path = PathKit_iOSTests;
 			sourceTree = "<group>";
 		};
 		A60AA486220BFD640041C676 /* Tests */ = {
@@ -217,11 +185,8 @@
 			children = (
 				A6F885C821F79CA800FFC5A1 /* MetaData */,
 				9FE9610F220D596700D5F0A9 /* PathKit_OSX */,
-				9FE9611A220D596700D5F0A9 /* PathKit_OSXTests */,
 				9FE96138220D59CD00D5F0A9 /* PathKit_tvOS */,
-				9FE96143220D59CD00D5F0A9 /* PathKit_tvOSTests */,
 				9FE9616E220D5AF600D5F0A9 /* PathKit_iOS */,
-				9FE96179220D5AF600D5F0A9 /* PathKit_iOSTests */,
 				A6F885BE21F79C6700FFC5A1 /* Products */,
 				A6FE5B6B21FAAFCB009CD767 /* Sources */,
 				A60AA486220BFD640041C676 /* Tests */,
@@ -245,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F885C121F79C6700FFC5A1 /* Info.plist */,
+				9FE9611D220D596700D5F0A9 /* TestsInfo.plist */,
 			);
 			path = MetaData;
 			sourceTree = "<group>";
@@ -612,7 +578,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = PathKit_OSX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,7 +605,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = PathKit_OSX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_OSXTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -681,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_OSXTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -704,7 +670,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PathKit_tvOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -731,7 +697,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PathKit_tvOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -756,7 +722,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_tvOSTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -779,7 +745,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_tvOSTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -806,7 +772,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PathKit_iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -833,7 +799,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PathKit_iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MetaData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -858,7 +824,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_iOSTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -880,7 +846,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3GED29J33;
-				INFOPLIST_FILE = PathKit_iOSTests/Info.plist;
+				INFOPLIST_FILE = MetaData/TestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
