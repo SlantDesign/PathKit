@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6F885BC21F79C6700FFC5A1"
-               BuildableName = "PathKit.framework"
-               BlueprintName = "PathKit"
+               BlueprintIdentifier = "9FE9616C220D5AF600D5F0A9"
+               BuildableName = "PathKit_iOS.framework"
+               BlueprintName = "PathKit_iOS"
                ReferencedContainer = "container:PathKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A60AA47A220BFCC10041C676"
-               BuildableName = "PathKitTests.xctest"
-               BlueprintName = "PathKitTests"
+               BlueprintIdentifier = "9FE96174220D5AF600D5F0A9"
+               BuildableName = "PathKit_iOSTests.xctest"
+               BlueprintName = "PathKit_iOSTests"
                ReferencedContainer = "container:PathKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6F885BC21F79C6700FFC5A1"
-            BuildableName = "PathKit.framework"
-            BlueprintName = "PathKit"
+            BlueprintIdentifier = "9FE9616C220D5AF600D5F0A9"
+            BuildableName = "PathKit_iOS.framework"
+            BlueprintName = "PathKit_iOS"
             ReferencedContainer = "container:PathKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6F885BC21F79C6700FFC5A1"
-            BuildableName = "PathKit.framework"
-            BlueprintName = "PathKit"
+            BlueprintIdentifier = "9FE9616C220D5AF600D5F0A9"
+            BuildableName = "PathKit_iOS.framework"
+            BlueprintName = "PathKit_iOS"
             ReferencedContainer = "container:PathKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6F885BC21F79C6700FFC5A1"
-            BuildableName = "PathKit.framework"
-            BlueprintName = "PathKit"
+            BlueprintIdentifier = "9FE9616C220D5AF600D5F0A9"
+            BuildableName = "PathKit_iOS.framework"
+            BlueprintName = "PathKit_iOS"
             ReferencedContainer = "container:PathKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

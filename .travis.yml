@@ -1,5 +1,12 @@
 os: osx
+osx_image: xcode10.1
 language: swift
 xcode_project: PathKit/PathKit.xcodeproj
-xcode_scheme: PathKit
-xcode_destination: platform=macOS
+matrix:
+  include:
+  - xcode_scheme: PathKitOSX
+    xcode_destination: platform=macOS
+  - xcode_scheme: PathKitiOS
+    xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+  - xcode_scheme: PathKittvOS
+    xcode_destination: platform=tvOS Simulator,OS=12.1,name=Apple TV 4K

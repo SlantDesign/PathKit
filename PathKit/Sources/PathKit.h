@@ -7,12 +7,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-//! Project version number for PathKit.
+//! Project version number for PathKit_OSX.
 FOUNDATION_EXPORT double PathKitVersionNumber;
 
-//! Project version string for PathKit.
+//! Project version string for PathKit_OSX.
 FOUNDATION_EXPORT const unsigned char PathKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <PathKit/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <PathKit_OSX/PublicHeader.h>
 
 
