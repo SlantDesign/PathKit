@@ -10,14 +10,14 @@ import Foundation
 /// A line in 2-dimensional space represented in its normal form.
 public struct Line {
     /// The inclination of the line in radians.
-    public var 𝜭: Angle
+    public var angle: Angle
 
     /// The length of the normal segment.
     /// The normal segment joins the origin with the closest point on the line to the origin.
-    public var p: Double
+    public var distanceFromOrigin: Double
 
     /// Determines whether `point` is on the line.
     public func contains(_ point: Point) -> Bool {
-        return (point.y * sin(𝜭) + point.x * cos(𝜭)) == p
+        return (point.y * sin(angle) + point.x * cos(angle)) == distanceFromOrigin
     }
 }
