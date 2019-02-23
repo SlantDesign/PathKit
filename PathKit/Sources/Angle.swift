@@ -10,6 +10,7 @@ import Foundation
 public struct Angle: Equatable {
 
     public static let π = Angle(radians: Double.pi)
+    public static let τ = Angle(radians: 2 * Double.pi)
 
     public static let zero = Angle(radians: 0)
 
@@ -25,6 +26,27 @@ public struct Angle: Equatable {
         set {
             radians = newValue * Double.pi / 180.0
         }
+    }
+
+    /// True if the angle is positive, false otherwise.
+    public var isPositive: Bool {
+        return 0.0 < radians
+    }
+
+    /// A positive normalized angle between 0 and 2π.
+    public var positiveNormalized: Angle {
+        let angle = Angle(radians: radians.truncatingRemainder(dividingBy: Angle.τ.radians))
+        return isPositive ? angle : angle + Angle.τ
+    }
+
+    /// Returns the angular distance between two angles.
+    ///
+    /// For example the distance between 1 and -360 degrees is 1 degree.
+    public static func distance(_ lhs: Angle, _ rhs: Angle) -> Angle {
+        var angleDifference = abs(lhs.positiveNormalized.radians - rhs.positiveNormalized.radians)
+        let complementaryAgnleDiff = Angle.τ.radians - angleDifference
+        angleDifference = min(angleDifference, complementaryAgnleDiff)
+        return Angle(radians: angleDifference)
     }
 
     // MARK: - Initializers
@@ -102,4 +124,16 @@ public func sin(_ angle: Angle) -> Double {
 
 public func tan(_ angle: Angle) -> Double {
     return tan(angle.radians)
+}
+
+extension Angle: Comparable {
+    public static func < (lhs: Angle, rhs: Angle) -> Bool {
+        return lhs.radians < rhs.radians
+    }
+}
+
+extension Angle: ApproximatelyEquatable {
+    public static func equal(_ lhs: Angle, _ rhs: Angle, accuracy: Angle) -> Bool {
+        return distance(lhs, rhs) <= accuracy
+    }
 }
