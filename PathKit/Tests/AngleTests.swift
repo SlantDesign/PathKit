@@ -15,7 +15,7 @@ class AngleTests: XCTestCase {
         XCTAssert(Angle.τ.degrees + Angle.τ.degrees == 720.0)
     }
 
-    func testIsPositive() {
+    func testIsNonNegative() {
         XCTAssert(Angle.π.isNonNegative)
         XCTAssert(Angle.τ.isNonNegative)
         XCTAssert(Angle(radians: 0.000000000001).isNonNegative)
@@ -53,5 +53,25 @@ class AngleTests: XCTestCase {
         XCTAssert(Angle.zero < -Angle.π)
         XCTAssert(Angle.τ < Angle.π)
         XCTAssert(Angle.τ * 3 < Angle.π)
+    }
+
+    func testEquatable() {
+        XCTAssert(Angle.zero == Angle.zero)
+        XCTAssert(Angle.zero != Angle.π)
+        XCTAssert(Angle.π == -Angle.π)
+        XCTAssert(Angle.τ  == 2 * Angle.π)
+        XCTAssert(Angle.τ  != -2 * Angle.π) // rounding error
+        XCTAssert(Angle.τ == Angle.zero)
+    }
+
+    func testApproximatelyEquatable() {
+        XCTAssert(Angle.equal(Angle.zero, Angle.zero, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.zero, Angle.zero, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.π, -Angle.π, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.τ, 2 * Angle.π, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.τ, Angle.zero, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(-Angle.τ, Angle.zero, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.τ, -2 * Angle.π, accuracy: Angle.smallestAngle))
+        XCTAssert(Angle.equal(Angle.τ, 66 * Angle.π, accuracy: Angle(radians: 1.0e-14 )))
     }
 }
