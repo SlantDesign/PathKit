@@ -14,6 +14,9 @@ public struct Angle {
 
     public static let zero = Angle(radians: 0)
 
+    /// This value compares less than or equal to all Angles, but greater than Angle.zero.
+    public static let smallestAngle = Angle(radians: Double.leastNonzeroMagnitude)
+
     /// Value in radians.
     public var radians: Double
 
