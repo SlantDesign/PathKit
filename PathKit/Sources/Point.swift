@@ -9,7 +9,7 @@ import Foundation
 
 /// A data structure used to represnet a point in 2-dimensional Cartesian coordinate system.
 /// The components of the point are represented using double precision floating points.
-public struct Point: Equatable {
+public struct Point: Equatable, ApproximatelyEquatable {
     /// The x-coordinate of the point.
     public var x: Double
 
@@ -89,4 +89,11 @@ public func distance(_ a: Point, _ b: Point) -> Double {
 /// Computes the square of the Euclidean distance between two points.
 public func squareDistance(_ a: Point, _ b: Point) -> Double {
     return Vector(head: b, tail: a).lengthSquared
+}
+
+extension Point {
+    /// Evaluates if the two points are approximately equal. The two points are deemed approximately equal if the distance between them is less than `accuracy`.
+    public static func equal(_ lhs: Point, _ rhs: Point, accuracy: Double) -> Bool {
+        return distance(lhs, rhs) < accuracy
+    }
 }

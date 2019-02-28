@@ -156,7 +156,7 @@ extension Angle: Comparable {
 }
 
 extension Angle: ApproximatelyEquatable {
-    /// Returns true if the distance between two angles is bounded by a given accuracy, and false otherwise.
+    /// Returns true if the distance between two angles is less than `accuracy`, and false otherwise.
     ///
     /// - Parameters:
     ///   - lhs: A value to compare.
@@ -164,6 +164,6 @@ extension Angle: ApproximatelyEquatable {
     /// - Precondition: The provided `accuracy` must be a positive angle.
     public static func equal(_ lhs: Angle, _ rhs: Angle, accuracy: Angle) -> Bool {
         precondition(accuracy.radians > 0)
-        return distance(lhs, rhs) <= accuracy
+        return distance(lhs, rhs) < accuracy
     }
 }

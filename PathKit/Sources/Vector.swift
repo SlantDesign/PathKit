@@ -9,7 +9,7 @@ import Foundation
 
 /// A data structure used to represnet a 2-dimensional vector in a Cartesian coordinate system.
 /// The components of the vector are represented using double precision floating points.
-public struct Vector: Equatable {
+public struct Vector: Equatable, ApproximatelyEquatable {
 
     /// The x-component of the vector.
     public var dx: Double
@@ -150,5 +150,12 @@ public extension Vector {
     /// Returns a unit vector with the same direction as `self`.
     public var normalized: Vector {
         return self / length
+    }
+}
+
+extension Vector {
+    /// Evaluates if the two vectors are approximately equal. The two vectors are deemed approximately equal if the length of their difference is less than `accuracy`.
+    public static func equal(_ lhs: Vector, _ rhs: Vector, accuracy: Double) -> Bool {
+        return (lhs - rhs).length < accuracy
     }
 }
