@@ -9,7 +9,6 @@ import XCTest
 
 class VectorTests: XCTestCase {
 
-
     func testLength() {
         XCTAssert(Vector.zero.length == 0)
         XCTAssert(Vector(dx: 3, dy: 4).length == 5)

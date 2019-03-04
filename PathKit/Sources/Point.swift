@@ -68,7 +68,7 @@ public extension Point {
     }
 }
 
-extension Point : CustomDebugStringConvertible {
+extension Point: CustomDebugStringConvertible {
 
     /// A textual representation of this instance, suitable for debugging.
     public var debugDescription: String {
