@@ -17,4 +17,17 @@ class PointTests: XCTestCase {
         XCTAssertFalse(Point.equal(p3, p1, accuracy: 0.01))
         XCTAssertFalse(Point.equal(p1, p3, accuracy: 0.01))
     }
+
+    func testDistance() {
+        let p1 = Point(x: 3, y: 4)
+        XCTAssert(distance(Point.zero, p1) == 5)
+        XCTAssert(squareDistance(.zero, p1) == 25)
+    }
+
+    func testLerp() {
+        let p1 = Point(x: 6, y: 8)
+        XCTAssert(lerp(.zero, p1, at: 0) == .zero)
+        XCTAssert(lerp(.zero, p1, at: 1) == p1)
+        XCTAssert(lerp(.zero, p1, at: 0.5) == Point(x: 3, y: 4))
+    }
 }

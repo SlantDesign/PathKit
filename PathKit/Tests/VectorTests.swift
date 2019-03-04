@@ -9,9 +9,14 @@ import XCTest
 
 class VectorTests: XCTestCase {
 
-
-    func testLengthZero() {
+    func testLength() {
         XCTAssert(Vector.zero.length == 0)
+        XCTAssert(Vector(dx: 3, dy: 4).length == 5)
+        XCTAssert(Vector(dx: 3, dy: 4).lengthSquared == 25)
+    }
+
+    func testNormalized() {
+        XCTAssert(Vector(dx: 3, dy: 4).normalized.length == 1)
     }
 
     func testApproximateEquality() {
