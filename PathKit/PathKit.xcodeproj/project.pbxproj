@@ -53,6 +53,9 @@
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
+		A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583E6222DF39D005EDD4E /* LineTests.swift */; };
+		A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583E6222DF39D005EDD4E /* LineTests.swift */; };
+		A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583E6222DF39D005EDD4E /* LineTests.swift */; };
 		A6FE425E221A0645007639FD /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */; };
 		A6FE43442220D576007639FD /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,6 +108,7 @@
 		A60AA47D220BFCC10041C676 /* VectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTests.swift; sourceTree = "<group>"; };
 		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
 		A6B582EB222767C8005EDD4E /* PointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
+		A6B583E6222DF39D005EDD4E /* LineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTests.swift; sourceTree = "<group>"; };
 		A6F885C121F79C6700FFC5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproximatelyEquatable.swift; sourceTree = "<group>"; };
 		A6FE434F2220DED8007639FD /* AngleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 		A60AA486220BFD640041C676 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A6B583E6222DF39D005EDD4E /* LineTests.swift */,
 				A60AA47D220BFCC10041C676 /* VectorTests.swift */,
 				A6FE434F2220DED8007639FD /* AngleTests.swift */,
 				A6B582EB222767C8005EDD4E /* PointTests.swift */,
@@ -478,6 +483,7 @@
 				A6FE43492220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				9FE9612F220D598800D5F0A9 /* Point.swift in Sources */,
 				9FE9612C220D598800D5F0A9 /* Intersection.swift in Sources */,
+				A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE9612B220D598800D5F0A9 /* Angle.swift in Sources */,
 				9FE96130220D598800D5F0A9 /* Vector.swift in Sources */,
 				9FE9612E220D598800D5F0A9 /* LineSegment.swift in Sources */,
@@ -509,6 +515,7 @@
 				A6FE43472220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				9FE96158220D59EE00D5F0A9 /* Point.swift in Sources */,
 				9FE96155220D59EE00D5F0A9 /* Intersection.swift in Sources */,
+				A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96154220D59EE00D5F0A9 /* Angle.swift in Sources */,
 				9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */,
 				9FE96157220D59EE00D5F0A9 /* LineSegment.swift in Sources */,
@@ -540,6 +547,7 @@
 				A6FE43462220D84A007639FD /* ApproximatelyEquatable.swift in Sources */,
 				9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96188220D5AFB00D5F0A9 /* Point.swift in Sources */,
+				A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96189220D5AFB00D5F0A9 /* Vector.swift in Sources */,
 				9FE96186220D5AFB00D5F0A9 /* Line.swift in Sources */,
 				9FE96184220D5AFB00D5F0A9 /* Angle.swift in Sources */,
