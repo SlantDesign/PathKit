@@ -9,7 +9,8 @@ import Foundation
 
 /// A line in 2-dimensional space represented in its normal form.
 public struct Line {
-    /// The inclination of the line in radians.
+    /// The inclination of the normal segment in radians.
+    /// The normal segment joins the origin with the closest point on the line to the origin.
     public var angle: Angle
 
     /// The length of the normal segment.
