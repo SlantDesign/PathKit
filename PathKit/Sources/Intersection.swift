@@ -8,7 +8,7 @@
 import Foundation
 
 /// Struct used to represent the points at which 2 planar curves intersect.
-public enum Intersection {
+public enum Intersection: Equatable, ApproximatelyEquatable {
     /// Intersect over finitely many points
     case finite([Point])
 
@@ -17,4 +17,19 @@ public enum Intersection {
 
     /// Empty intersection
     case empty
+}
+
+extension Intersection {
+    public static func equal(_ lhs: Intersection, _ rhs: Intersection, accuracy: Double) -> Bool {
+        switch (lhs, rhs) {
+        case (.empty, .empty):
+            return true
+        case (.infinite, .infinite):
+            return true
+        case (.finite(let leftPoints), .finite(let rightPoints)):
+            return [Point].equal(leftPoints, rightPoints, accuracy: accuracy)
+        default:
+            return false
+        }
+    }
 }
