@@ -36,9 +36,8 @@ public struct Vector: Equatable, ApproximatelyEquatable {
     ///
     /// - Parameters:
     ///   - angle: The angle of the unit vector in polar coordinates.
-    public init(angle: Angle) {
-        self.dx = cos(angle)
-        self.dy = sin(angle)
+    public static func unitVector(with angle: Angle) -> Vector {
+        return Vector(dx: cos(angle), dy: sin(angle))
     }
 }
 
