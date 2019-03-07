@@ -36,7 +36,7 @@ public struct LineSegment {
     public init(start: Point, end: Point) {
         precondition(start != end)
         self.start = start
-        self.end = start
+        self.end = end
     }
 
 
