@@ -40,6 +40,9 @@ public struct LineSegment {
     }
 
 
+    public func offset(by vector: Vector) -> LineSegment {
+        return LineSegment(start: start + vector, end: end + vector)
+    }
 
     /// Computes the intersection of two line segments.
     /// Source: https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
