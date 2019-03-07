@@ -32,7 +32,9 @@ public struct LineSegment {
     /// - Parameters:
     ///   - start: The starting point of the line segment.
     ///   - end: The end point of the line segment.
+    /// - Precondition: The `start` point and `end` point of the line segment must be different.
     public init(start: Point, end: Point) {
+        precondition(start != end)
         self.start = start
         self.end = start
     }
