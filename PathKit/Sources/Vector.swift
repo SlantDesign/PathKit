@@ -31,6 +31,15 @@ public struct Vector: Equatable, ApproximatelyEquatable {
         self.dx = dx
         self.dy = dy
     }
+
+    /// Creates a unit vector with the specified angle.
+    ///
+    /// - Parameters:
+    ///   - angle: The angle of the unit vector in polar coordinates.
+    public init(angle: Angle) {
+        self.dx = cos(angle)
+        self.dy = sin(angle)
+    }
 }
 
 extension Vector {

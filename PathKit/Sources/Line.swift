@@ -16,8 +16,14 @@ public struct Line {
     /// The normal segment joins the origin with the closest point on the line to the origin.
     public var distanceFromOrigin: Double
 
-    /// Determines whether `point` is on the line.
-    public func contains(_ point: Point) -> Bool {
-        return (point.y * sin(angle) + point.x * cos(angle)) == distanceFromOrigin
+    /// Determines whether `point` is on `self`.
+    ///
+    /// - Parameters:
+    ///   - point: The point that may or may not be on `self`
+    ///   - accuracy: The accuracy used to determine if the point lies on `self`.
+    /// - Returns: True if `point` is on `self` within the given accuracy.
+    public func contains(_ point: Point, accuracy: Double) -> Bool {
+        let dotProduct = Vector(head: point, tail: .zero) • Vector(angle: angle)
+        return Double.equal(dotProduct, distanceFromOrigin, accuracy: accuracy)
     }
 }
