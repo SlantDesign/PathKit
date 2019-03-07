@@ -38,4 +38,50 @@ public struct LineSegment {
         self.start = start
         self.end = start
     }
+
+
+
+    /// Computes the intersection of two line segments.
+    /// Source: https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
+    public static func intersection(_ lhs: LineSegment, _ rhs: LineSegment, accuracy: Double) -> Intersection {
+        let p = lhs.start
+        let q = rhs.start
+        let qp = Vector(head: q, tail: p)
+        let r = Vector(head: lhs.end, tail: lhs.start)
+        let s = Vector(head: rhs.end, tail: rhs.start)
+        let parallel = Vector.areParallel(r, s, accuracy: accuracy)
+        let collinear = Vector.areParallel(qp, r, accuracy: accuracy)
+        let zeroToOne = 0.0...1.0
+
+        if parallel && collinear {
+            // lines are collinear
+            let unitVectorR = r.unitVector
+            let t0 = qp • unitVectorR
+            let t1 = t0 + s • unitVectorR
+            let range = (s • r < 0) ? t1...t0 : t0...t1
+
+            if range.overlaps(zeroToOne) {
+                // line segments overlap
+                return .infinite
+            } else {
+                // line segments are disjoint
+                return .empty
+            }
+        } else if parallel {
+            // lines are parallel and non-intersecting
+            return .empty
+        } else {
+            let rXs = r ✕ s
+            let t = qp ✕ s / rXs
+            let u = qp ✕ r / rXs
+
+            if zeroToOne.contains(t) && zeroToOne.contains(u) {
+                // line segments intersect at single point
+                return Intersection.finite([p + t * r])
+            } else {
+                // line segments are not parallel and do not intersect
+                return .empty
+            }
+        }
+    }
 }
