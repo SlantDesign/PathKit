@@ -79,6 +79,7 @@ extension Vector: CustomDebugStringConvertible {
 }
 
 infix operator • : MultiplicationPrecedence
+infix operator ✕ : MultiplicationPrecedence
 
 public extension Vector {
     /// Returns the sum of two vectors.
@@ -111,9 +112,14 @@ public extension Vector {
         return Vector(dx: rhs.dx * Double(lhs), dy: rhs.dy * Double(lhs))
     }
 
-    /// Returns the dot product between two vectors.
+    /// Returns the dot product of two vectors.
     public static func • (lhs: Vector, rhs: Vector) -> Double {
         return rhs.dx * lhs.dx + rhs.dy * lhs.dy
+    }
+
+    /// Returns the 2-dimensional cross product of two vectors.
+    public static func ✕ (lhs: Vector, rhs: Vector) -> Double {
+        return lhs.dx * rhs.dy - lhs.dy * rhs.dx
     }
 
     /// Returns the scalar division of vector by a scalar.
