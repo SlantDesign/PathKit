@@ -31,14 +31,6 @@ public struct Vector: Equatable, ApproximatelyEquatable {
         self.dx = dx
         self.dy = dy
     }
-
-    /// Creates a unit vector with the specified angle.
-    ///
-    /// - Parameters:
-    ///   - angle: The angle of the unit vector in polar coordinates.
-    public static func unitVector(with angle: Angle) -> Vector {
-        return Vector(dx: cos(angle), dy: sin(angle))
-    }
 }
 
 extension Vector {
@@ -66,6 +58,19 @@ extension Vector {
     public init(head: Point, tail: Point) {
         dx = head.x - tail.x
         dy = head.y - tail.y
+    }
+
+    /// Creates a unit vector with the specified angle.
+    ///
+    /// - Parameters:
+    ///   - angle: The angle of the unit vector in polar coordinates.
+    public static func unitVector(with angle: Angle) -> Vector {
+        return Vector(dx: cos(angle), dy: sin(angle))
+    }
+
+    /// Returns the unit vector of `self`.
+    public var unitVector: Vector {
+        return self / self.lengthSquared
     }
 }
 
