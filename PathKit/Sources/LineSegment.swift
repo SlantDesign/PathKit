@@ -27,7 +27,7 @@ public struct LineSegment {
         return lerp(start, end, at: t)
     }
 
-    /// Creates a line segment begins at the point `start` and ends the point `end`.
+    /// Creates a line segment beginning at `start` and ending at `end`.
     ///
     /// - Parameters:
     ///   - start: The starting point of the line segment.

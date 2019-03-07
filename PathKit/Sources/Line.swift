@@ -16,6 +16,16 @@ public struct Line {
     /// The normal segment joins the origin with the closest point on the line to the origin.
     public var distanceFromOrigin: Double
 
+    /// Creates a line in normal form.
+    ///
+    /// - Parameters:
+    ///   - angle: The inclination of the line.
+    ///   - distanceFromOrigin: The length of the normal segment from the origin to the line.
+    public init(angle: Angle, distanceFromOrigin: Double) {
+        self.angle = angle
+        self.distanceFromOrigin = distanceFromOrigin
+    }
+
     /// Determines whether `point` is on `self`.
     ///
     /// - Parameters:
