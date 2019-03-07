@@ -23,3 +23,13 @@ extension Double: ApproximatelyEquatable {
         return abs(lhs - rhs) < accuracy
     }
 }
+
+extension Array: ApproximatelyEquatable where Element: ApproximatelyEquatable {
+    public typealias Accuracy = Element.Accuracy
+
+    public static func equal(_ lhs: Array<Element>, _ rhs: Array<Element>, accuracy: Accuracy) -> Bool {
+        return zip(lhs, rhs).allSatisfy {
+            Element.equal($0.0, $0.1, accuracy: accuracy)
+        }
+    }
+}
