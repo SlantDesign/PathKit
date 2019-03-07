@@ -181,6 +181,6 @@ extension Vector {
     /// Evalutes if the two vectors are parallel. The two vectors are deemed parallel if their cross product is less
     /// than the given accuracy.
     public static func areParallel(_ lhs: Vector, _ rhs: Vector, accuracy: Double) -> Bool {
-        return lhs ✕ rhs < accuracy
+        return abs(lhs ✕ rhs) < accuracy
     }
 }
