@@ -33,6 +33,11 @@ extension LineSegment {
         return distance(start, end)
     }
 
+    /// A vector which points from the start point to the end point of `self`.
+    public var vector: Vector {
+        return Vector(head: end, tail: start)
+    }
+
     /// Returns a point along the line passing through `self` using point linear interpolation.
     ///
     /// - Parameter t: The interpolation parameter used to calculate the point.
