@@ -14,6 +14,20 @@ public struct LineSegment {
     /// The endpoint of `self`.
     public var end: Point
 
+    /// Creates a line segment beginning at `start` and ending at `end`.
+    ///
+    /// - Parameters:
+    ///   - start: The starting point of the line segment.
+    ///   - end: The end point of the line segment.
+    /// - Precondition: The `start` point and `end` point of the line segment must be different.
+    public init(start: Point, end: Point) {
+        precondition(start != end)
+        self.start = start
+        self.end = end
+    }
+}
+
+extension LineSegment {
     /// The Euclidean distance from `start` to `end`.
     public var length: Double {
         return distance(start, end)
@@ -26,19 +40,6 @@ public struct LineSegment {
     public func point(at t: Double) -> Point {
         return lerp(start, end, at: t)
     }
-
-    /// Creates a line segment beginning at `start` and ending at `end`.
-    ///
-    /// - Parameters:
-    ///   - start: The starting point of the line segment.
-    ///   - end: The end point of the line segment.
-    /// - Precondition: The `start` point and `end` point of the line segment must be different.
-    public init(start: Point, end: Point) {
-        precondition(start != end)
-        self.start = start
-        self.end = end
-    }
-
 
     public func offset(by vector: Vector) -> LineSegment {
         return LineSegment(start: start + vector, end: end + vector)
