@@ -49,20 +49,20 @@ extension Point {
 }
 
 public extension Point {
-    public static func + (lhs: Point, rhs: Vector) -> Point {
+    static func + (lhs: Point, rhs: Vector) -> Point {
         return Point(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
     }
 
-    public static func - (lhs: Point, rhs: Vector) -> Point {
+    static func - (lhs: Point, rhs: Vector) -> Point {
         return Point(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
     }
 
-    public static func += (lhs: inout Point, rhs: Vector) {
+    static func += (lhs: inout Point, rhs: Vector) {
         lhs.x += rhs.dx
         lhs.y += rhs.dy
     }
 
-    public static func -= (lhs: inout Point, rhs: Vector) {
+    static func -= (lhs: inout Point, rhs: Vector) {
         lhs.x -= rhs.dx
         lhs.y -= rhs.dy
     }
