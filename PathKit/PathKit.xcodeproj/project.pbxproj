@@ -50,6 +50,12 @@
 		9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
+		A605055F225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050560225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050561225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050562225031080054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050563225031090054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A60505642250310A0054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
@@ -105,6 +111,7 @@
 		9FE9613F220D59CD00D5F0A9 /* PathKit_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE96175220D5AF600D5F0A9 /* PathKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A605055E225030F90054356F /* Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap.swift; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -218,12 +225,13 @@
 			children = (
 				9FE96110220D596700D5F0A9 /* PathKit.h */,
 				A60AA41B220A07B10041C676 /* Angle.swift */,
+				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
 				A60AA41D220A0D950041C676 /* Line.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
+				A605055E225030F90054356F /* Overlap.swift */,
 				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
 				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
-				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -470,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE96127220D598700D5F0A9 /* Line.swift in Sources */,
+				A605055F225030F90054356F /* Overlap.swift in Sources */,
 				9FE96129220D598700D5F0A9 /* Point.swift in Sources */,
 				9FE96126220D598700D5F0A9 /* Intersection.swift in Sources */,
 				9FE96125220D598700D5F0A9 /* Angle.swift in Sources */,
@@ -483,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60505642250310A0054356F /* Overlap.swift in Sources */,
 				9FE96131220D599100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE9612D220D598800D5F0A9 /* Line.swift in Sources */,
 				A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */,
@@ -503,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE96150220D59ED00D5F0A9 /* Line.swift in Sources */,
+				A6050560225030F90054356F /* Overlap.swift in Sources */,
 				9FE96152220D59ED00D5F0A9 /* Point.swift in Sources */,
 				9FE9614F220D59ED00D5F0A9 /* Intersection.swift in Sources */,
 				9FE9614E220D59ED00D5F0A9 /* Angle.swift in Sources */,
@@ -516,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6050563225031090054356F /* Overlap.swift in Sources */,
 				9FE9615A220D59F100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96156220D59EE00D5F0A9 /* Line.swift in Sources */,
 				A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */,
@@ -536,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE9618C220D5AFC00D5F0A9 /* Line.swift in Sources */,
+				A6050561225030F90054356F /* Overlap.swift in Sources */,
 				9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */,
 				9FE9618B220D5AFC00D5F0A9 /* Intersection.swift in Sources */,
 				9FE9618A220D5AFC00D5F0A9 /* Angle.swift in Sources */,
@@ -549,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6050562225031080054356F /* Overlap.swift in Sources */,
 				9FE96187220D5AFB00D5F0A9 /* LineSegment.swift in Sources */,
 				9FE96185220D5AFB00D5F0A9 /* Intersection.swift in Sources */,
 				A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */,
