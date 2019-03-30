@@ -13,7 +13,7 @@ public enum Intersection: Equatable, ApproximatelyEquatable {
     case finite([Point])
 
     /// Intersect over infinitely many points.
-    case infinite
+    case infinite(Overlap)
 
     /// Empty intersection
     case empty
@@ -24,8 +24,8 @@ extension Intersection {
         switch (lhs, rhs) {
         case (.empty, .empty):
             return true
-        case (.infinite, .infinite):
-            return true
+        case (.infinite(let lhs), .infinite(let rhs)):
+            return Overlap.equal(lhs, rhs, accuracy: accuracy)
         case (.finite(let leftPoints), .finite(let rightPoints)):
             return [Point].equal(leftPoints, rightPoints, accuracy: accuracy)
         default:
