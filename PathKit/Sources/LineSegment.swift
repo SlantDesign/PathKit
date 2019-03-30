@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LineSegment {
+public struct LineSegment: Equatable, ApproximatelyEquatable {
     /// The starting point of `self`.
     public var start: Point
 
@@ -24,6 +24,15 @@ public struct LineSegment {
         precondition(start != end)
         self.start = start
         self.end = end
+    }
+}
+
+extension LineSegment {
+    /// Evaluates if the two line segments are approximately equal. The two line segments are deemed approximately
+    /// equal if the distance between their start points and the distance between their end points are both less than
+    /// `accuracy`.
+    public static func equal(_ lhs: LineSegment, _ rhs: LineSegment, accuracy: Double) -> Bool {
+        return Point.equal(lhs.start, rhs.start, accuracy: accuracy) && Point.equal(lhs.end, rhs.end, accuracy: accuracy)
     }
 }
 
