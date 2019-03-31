@@ -47,6 +47,14 @@ extension LineSegment {
         return Vector(head: end, tail: start)
     }
 
+    public var xRange: ClosedRange<Double> {
+        return start.x <= end.x ? start.x...end.x : end.x...start.x
+    }
+
+    public var yRange: ClosedRange<Double> {
+        return start.y <= end.y ? start.y...end.y : end.y...start.y
+    }
+
     /// Returns a point along the line passing through `self` using point linear interpolation.
     ///
     /// - Parameter t: The interpolation parameter used to calculate the point.
@@ -76,9 +84,17 @@ extension LineSegment {
             let t1 = t0 + rhsVector • unitVectorR
             let range = (rhsVector • lhsVector < 0) ? t1...t0 : t0...t1
 
-            if range.overlaps(zeroToOne) {
+            if range.overlaps(zeroToOne, accuracy: accuracy) {
                 // line segments overlap
-                return .infinite
+                guard let xOverlap = ClosedRange.intersection(lhs.xRange, rhs.xRange),
+                    let yOverlap = ClosedRange.intersection(lhs.yRange, rhs.yRange) else {
+                        preconditionFailure("Line segments should overlap.")
+                }
+
+                let overlapStart = Point(x: xOverlap.lowerBound, y: yOverlap.lowerBound)
+                let overlapEnd = Point(x: xOverlap.upperBound, y: yOverlap.upperBound)
+                let overlap: Overlap = .lineSegment(LineSegment(start: overlapStart, end: overlapEnd))
+                return .infinite(overlap)
             } else {
                 // line segments are disjoint
                 return .empty
@@ -91,7 +107,7 @@ extension LineSegment {
             let t = startVector ✕ rhsVector / rXs
             let u = startVector ✕ lhsVector / rXs
 
-            if zeroToOne.contains(t) && zeroToOne.contains(u) {
+            if zeroToOne.contains(t, accuracy: accuracy) && zeroToOne.contains(u, accuracy: accuracy) {
                 // line segments intersect at single point
                 return Intersection.finite([lhs.start + t * lhsVector])
             } else {
