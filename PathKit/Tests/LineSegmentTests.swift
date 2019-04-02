@@ -24,7 +24,9 @@ class LineSegmentTests: XCTestCase {
         var p22 = p12
         var l1 = LineSegment(start: p11, end: p12)
         var l2 = LineSegment(start: p21, end: p22)
-        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == Intersection.infinite)
+        var l3 = l1
+        var overlap = Overlap.lineSegment(l3)
+        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == .infinite(overlap))
 
         // Partially overlapping
         p11 = Point.zero
@@ -33,7 +35,9 @@ class LineSegmentTests: XCTestCase {
         p22 = Point(x: 11, y: 11)
         l1 = LineSegment(start: p11, end: p12)
         l2 = LineSegment(start: p21, end: p22)
-        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == Intersection.infinite)
+        l3 = LineSegment(start: p22, end: p12)
+        overlap = Overlap.lineSegment(l3)
+        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == .infinite(overlap))
 
         // Partially overlapping (opposite line directions)
         p11 = Point.zero
@@ -42,7 +46,9 @@ class LineSegmentTests: XCTestCase {
         p22 = Point(x: 33, y: 33)
         l1 = LineSegment(start: p11, end: p12)
         l2 = LineSegment(start: p21, end: p22)
-        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == Intersection.infinite)
+        l3 = LineSegment(start: p21, end: p12)
+        overlap = Overlap.lineSegment(l3)
+        XCTAssert(LineSegment.intersection(l1, l2, accuracy: Double.leastNonzeroMagnitude) == .infinite(overlap))
 
         // Parallel, Collinear but disjoint
         p11 = Point.zero
@@ -112,6 +118,9 @@ class LineSegmentTests: XCTestCase {
         l1 = LineSegment(start: p11, end: p12)
         offset = Vector(dx: Double.leastNonzeroMagnitude, dy: 0)
         l2 = l1.offset(by: offset)
-        XCTAssert(LineSegment.intersection(l1, l2, accuracy: 1.0e-10) == Intersection.infinite)
+        l3 = l1
+        overlap = Overlap.lineSegment(l3)
+        let intersection = LineSegment.intersection(l1, l2, accuracy: 1.0e-10)
+        XCTAssert(Intersection.equal(intersection, .infinite(overlap), accuracy: 1.0e-300))
     }
 }
