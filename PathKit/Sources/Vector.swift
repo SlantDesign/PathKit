@@ -31,15 +31,6 @@ public struct Vector: Equatable, ApproximatelyEquatable {
         self.dx = dx
         self.dy = dy
     }
-
-    /// Creates a unit vector with the specified angle.
-    ///
-    /// - Parameters:
-    ///   - angle: The angle of the unit vector in polar coordinates.
-    public init(angle: Angle) {
-        self.dx = cos(angle)
-        self.dy = sin(angle)
-    }
 }
 
 extension Vector {
@@ -68,6 +59,19 @@ extension Vector {
         dx = head.x - tail.x
         dy = head.y - tail.y
     }
+
+    /// Creates a unit vector with the specified angle.
+    ///
+    /// - Parameters:
+    ///   - angle: The angle of the unit vector in polar coordinates.
+    public static func unitVector(with angle: Angle) -> Vector {
+        return Vector(dx: cos(angle), dy: sin(angle))
+    }
+
+    /// Returns the unit vector of `self`.
+    public var unitVector: Vector {
+        return self / self.lengthSquared
+    }
 }
 
 extension Vector: CustomDebugStringConvertible {
@@ -79,85 +83,91 @@ extension Vector: CustomDebugStringConvertible {
 }
 
 infix operator • : MultiplicationPrecedence
+infix operator ✕ : MultiplicationPrecedence
 
 public extension Vector {
     /// Returns the sum of two vectors.
-    public static func + (lhs: Vector, rhs: Vector) -> Vector {
+    static func + (lhs: Vector, rhs: Vector) -> Vector {
         return Vector(dx: lhs.dx + rhs.dx, dy: lhs.dy + rhs.dy)
     }
 
     /// Returns the difference between two vectors.
-    public static func - (lhs: Vector, rhs: Vector) -> Vector {
+    static func - (lhs: Vector, rhs: Vector) -> Vector {
         return Vector(dx: lhs.dx - rhs.dx, dy: lhs.dy - rhs.dy)
     }
 
     /// Returns the scalar multiplication between a vector and a double precision scalar.
-    public static func * (lhs: Vector, rhs: Double) -> Vector {
+    static func * (lhs: Vector, rhs: Double) -> Vector {
         return Vector(dx: lhs.dx * rhs, dy: lhs.dy * rhs)
     }
 
     /// Returns the scalar multiplication between a double precision scalar and a vector.
-    public static func * (lhs: Double, rhs: Vector) -> Vector {
+    static func * (lhs: Double, rhs: Vector) -> Vector {
         return Vector(dx: rhs.dx * lhs, dy: rhs.dy * lhs)
     }
 
     /// Returns the scalar multiplication between a vector and an integer.
-    public static func * (lhs: Vector, rhs: Int) -> Vector {
+    static func * (lhs: Vector, rhs: Int) -> Vector {
         return Vector(dx: lhs.dx * Double(rhs), dy: lhs.dy * Double(rhs))
     }
 
     /// Returns the scalar multiplication between an integer and a vector.
-    public static func * (lhs: Int, rhs: Vector) -> Vector {
+    static func * (lhs: Int, rhs: Vector) -> Vector {
         return Vector(dx: rhs.dx * Double(lhs), dy: rhs.dy * Double(lhs))
     }
 
-    /// Returns the dot product between two vectors.
-    public static func • (lhs: Vector, rhs: Vector) -> Double {
+    /// Returns the dot product of two vectors.
+    static func • (lhs: Vector, rhs: Vector) -> Double {
         return rhs.dx * lhs.dx + rhs.dy * lhs.dy
     }
 
+    /// Returns the 2-dimensional cross product of two vectors.
+    static func ✕ (lhs: Vector, rhs: Vector) -> Double {
+        return lhs.dx * rhs.dy - lhs.dy * rhs.dx
+    }
+
     /// Returns the scalar division of vector by a scalar.
-    public static func / (lhs: Vector, rhs: Double) -> Vector {
+    static func / (lhs: Vector, rhs: Double) -> Vector {
         return Vector(dx: lhs.dx / rhs, dy: lhs.dy / rhs)
     }
 
     /// Returns the inverse vector of `self`.
-    public static prefix func - (vector: Vector) -> Vector {
+    static prefix func - (vector: Vector) -> Vector {
         return Vector(dx: -vector.dx, dy: -vector.dy)
     }
 
-    public static func += (lhs: inout Vector, rhs: Vector) {
+    static func += (lhs: inout Vector, rhs: Vector) {
         lhs.dx += rhs.dx
         lhs.dy += rhs.dy
     }
 
-    public static func -= (lhs: inout Vector, rhs: Vector) {
+    static func -= (lhs: inout Vector, rhs: Vector) {
         lhs.dx += rhs.dx
         lhs.dy += rhs.dy
     }
 
-    public static func *= (lhs: inout Vector, rhs: Double) {
+    static func *= (lhs: inout Vector, rhs: Double) {
         lhs.dx *= rhs
         lhs.dy *= rhs
     }
 
-    public static func /= (lhs: inout Vector, rhs: Double) {
+    static func /= (lhs: inout Vector, rhs: Double) {
         lhs.dx /= rhs
         lhs.dy /= rhs
     }
 
     /// Returns the vector's length.
-    public var length: Double {
+    var length: Double {
         return hypot(dx, dy)
     }
 
     /// Returns the square of the vector's length.
-    public var lengthSquared: Double {
+    var lengthSquared: Double {
         return self • self
     }
 
     /// Returns a unit vector with the same direction as `self`.
-    public var normalized: Vector {
+    var normalized: Vector {
         return self / length
     }
 }
@@ -166,5 +176,11 @@ extension Vector {
     /// Evaluates if the two vectors are approximately equal. The two vectors are deemed approximately equal if the length of their difference is less than `accuracy`.
     public static func equal(_ lhs: Vector, _ rhs: Vector, accuracy: Double) -> Bool {
         return (lhs - rhs).length < accuracy
+    }
+
+    /// Evalutes if the two vectors are parallel. The two vectors are deemed parallel if their cross product is less
+    /// than the given accuracy.
+    public static func areParallel(_ lhs: Vector, _ rhs: Vector, accuracy: Double) -> Bool {
+        return abs(lhs ✕ rhs) < accuracy
     }
 }

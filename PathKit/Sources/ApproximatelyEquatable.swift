@@ -17,9 +17,3 @@ public protocol ApproximatelyEquatable {
     ///   - accuracy: The accuracy used to determine if `lhs` is approximately equal to `rhs`.
     static func equal(_ lhs: Self, _ rhs: Self, accuracy: Accuracy) -> Bool
 }
-
-extension Double: ApproximatelyEquatable {
-    public static func equal(_ lhs: Double, _ rhs: Double, accuracy: Double) -> Bool {
-        return abs(lhs - rhs) < accuracy
-    }
-}

@@ -50,6 +50,30 @@
 		9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
+		A605055F225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050560225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050561225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050562225031080054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050563225031090054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A60505642250310A0054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
+		A6050567225055450054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A6050568225055450054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A6050569225055450054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A605056B225055770054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A605056C225055770054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A605056D225055770054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A605056F225055950054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A6050570225055950054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A6050571225055950054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A6050572225055950054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A6050573225055950054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A6050574225055AE0054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A6050575225055AE0054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A6050576225055AF0054356F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6050566225055450054356F /* Double+Extensions.swift */; };
+		A6050577225055B20054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A6050579225055B40054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
+		A605057A225055B70054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
@@ -105,6 +129,10 @@
 		9FE9613F220D59CD00D5F0A9 /* PathKit_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE96175220D5AF600D5F0A9 /* PathKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A605055E225030F90054356F /* Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap.swift; sourceTree = "<group>"; };
+		A6050566225055450054356F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		A605056A225055770054356F /* ClosedRange+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Extension.swift"; sourceTree = "<group>"; };
+		A605056E225055950054356F /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -169,6 +197,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6050565225055350054356F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6050566225055450054356F /* Double+Extensions.swift */,
+				A605056A225055770054356F /* ClosedRange+Extension.swift */,
+				A605056E225055950054356F /* Array+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A60AA486220BFD640041C676 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,14 +254,16 @@
 		A6FE5B6B21FAAFCB009CD767 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6050565225055350054356F /* Extensions */,
 				9FE96110220D596700D5F0A9 /* PathKit.h */,
 				A60AA41B220A07B10041C676 /* Angle.swift */,
+				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
 				A60AA41D220A0D950041C676 /* Line.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
+				A605055E225030F90054356F /* Overlap.swift */,
 				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
 				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
-				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -402,6 +442,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A6F885B321F79C6700FFC5A1;
 			productRefGroup = A6F885BE21F79C6700FFC5A1 /* Products */;
@@ -469,11 +510,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE96127220D598700D5F0A9 /* Line.swift in Sources */,
+				A605055F225030F90054356F /* Overlap.swift in Sources */,
 				9FE96129220D598700D5F0A9 /* Point.swift in Sources */,
+				A605056F225055950054356F /* Array+Extension.swift in Sources */,
 				9FE96126220D598700D5F0A9 /* Intersection.swift in Sources */,
 				9FE96125220D598700D5F0A9 /* Angle.swift in Sources */,
+				A605056B225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9612A220D598700D5F0A9 /* Vector.swift in Sources */,
 				A6FE434A2220D84C007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6050567225055450054356F /* Double+Extensions.swift in Sources */,
 				9FE96128220D598700D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,16 +527,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60505642250310A0054356F /* Overlap.swift in Sources */,
 				9FE96131220D599100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE9612D220D598800D5F0A9 /* Line.swift in Sources */,
 				A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */,
 				A6FE43492220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6050577225055B20054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9612F220D598800D5F0A9 /* Point.swift in Sources */,
 				9FE9612C220D598800D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE9612B220D598800D5F0A9 /* Angle.swift in Sources */,
+				A6050574225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96130220D598800D5F0A9 /* Vector.swift in Sources */,
 				9FE9612E220D598800D5F0A9 /* LineSegment.swift in Sources */,
+				A6050570225055950054356F /* Array+Extension.swift in Sources */,
 				A6FE43502220DED8007639FD /* AngleTests.swift in Sources */,
 				A6B583EB222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */,
 			);
@@ -502,11 +551,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE96150220D59ED00D5F0A9 /* Line.swift in Sources */,
+				A6050560225030F90054356F /* Overlap.swift in Sources */,
 				9FE96152220D59ED00D5F0A9 /* Point.swift in Sources */,
+				A6050571225055950054356F /* Array+Extension.swift in Sources */,
 				9FE9614F220D59ED00D5F0A9 /* Intersection.swift in Sources */,
 				9FE9614E220D59ED00D5F0A9 /* Angle.swift in Sources */,
+				A605056C225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE96153220D59ED00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43482220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6050568225055450054356F /* Double+Extensions.swift in Sources */,
 				9FE96151220D59ED00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,16 +568,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6050563225031090054356F /* Overlap.swift in Sources */,
 				9FE9615A220D59F100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96156220D59EE00D5F0A9 /* Line.swift in Sources */,
 				A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */,
 				A6FE43472220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE96158220D59EE00D5F0A9 /* Point.swift in Sources */,
 				9FE96155220D59EE00D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96154220D59EE00D5F0A9 /* Angle.swift in Sources */,
+				A6050575225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */,
 				9FE96157220D59EE00D5F0A9 /* LineSegment.swift in Sources */,
+				A6050572225055950054356F /* Array+Extension.swift in Sources */,
 				A6FE43512220DED8007639FD /* AngleTests.swift in Sources */,
 				A6B583EC222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */,
 			);
@@ -535,11 +592,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE9618C220D5AFC00D5F0A9 /* Line.swift in Sources */,
+				A6050561225030F90054356F /* Overlap.swift in Sources */,
 				9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */,
+				A6050573225055950054356F /* Array+Extension.swift in Sources */,
 				9FE9618B220D5AFC00D5F0A9 /* Intersection.swift in Sources */,
 				9FE9618A220D5AFC00D5F0A9 /* Angle.swift in Sources */,
+				A605056D225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6050569225055450054356F /* Double+Extensions.swift in Sources */,
 				9FE9618D220D5AFC00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,10 +609,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6050579225055B40054356F /* ClosedRange+Extension.swift in Sources */,
+				A6050562225031080054356F /* Overlap.swift in Sources */,
 				9FE96187220D5AFB00D5F0A9 /* LineSegment.swift in Sources */,
+				A6050576225055AF0054356F /* Double+Extensions.swift in Sources */,
 				9FE96185220D5AFB00D5F0A9 /* Intersection.swift in Sources */,
 				A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */,
 				A6FE43462220D84A007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A605057A225055B70054356F /* Array+Extension.swift in Sources */,
 				9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96188220D5AFB00D5F0A9 /* Point.swift in Sources */,
 				A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */,
@@ -607,7 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -634,7 +699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -654,7 +719,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -674,7 +739,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -699,7 +764,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
@@ -726,7 +791,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.1;
 				VALIDATE_PRODUCT = YES;
@@ -750,7 +815,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.1;
 			};
@@ -773,7 +838,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.1;
 				VALIDATE_PRODUCT = YES;
@@ -802,7 +867,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -829,7 +894,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -852,7 +917,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -874,7 +939,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jabt.PathKit-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -939,6 +1004,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -996,6 +1062,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

@@ -27,4 +27,39 @@ class VectorTests: XCTestCase {
         XCTAssertFalse(Vector.equal(v3, v1, accuracy: 0.01))
         XCTAssertFalse(Vector.equal(v1, v3, accuracy: 0.01))
     }
+
+    func testAreParallel() {
+        // identical
+        var v1 = Vector(dx: 0, dy: 1)
+        var v2 = Vector(dx: 0, dy: 1)
+        XCTAssert(Vector.areParallel(v1, v2, accuracy: Double.leastNonzeroMagnitude))
+
+        // parallel
+        v1 = Vector(dx: 1, dy: 1)
+        v2 = Vector(dx: 4, dy: 4)
+        XCTAssert(Vector.areParallel(v1, v2, accuracy: Double.leastNonzeroMagnitude))
+
+        // parallel, opposite direction
+        v1 = Vector(dx: 0, dy: 1)
+        v2 = Vector(dx: 0, dy: -1)
+        XCTAssert(Vector.areParallel(v1, v2, accuracy: Double.leastNonzeroMagnitude))
+
+        v1 = Vector(dx: 0, dy: 1)
+        v2 = Vector(dx: 0, dy: -32)
+        XCTAssert(Vector.areParallel(v1, v2, accuracy: Double.leastNonzeroMagnitude))
+
+        // perpendicular
+        v1 = Vector(dx: 0, dy: 1)
+        v2 = Vector(dx: 1, dy: 0)
+        XCTAssertFalse(Vector.areParallel(v1, v2, accuracy: 0.1))
+
+        // non-parallel
+        v1 = Vector(dx: 1, dy: 1)
+        v2 = Vector(dx: 1, dy: 0)
+        XCTAssertFalse(Vector.areParallel(v1, v2, accuracy: 0.1))
+
+        v1 = Vector(dx: 1, dy: 1)
+        v2 = Vector(dx: -1, dy: 0)
+        XCTAssertFalse(Vector.areParallel(v1, v2, accuracy: 0.1))
+    }
 }
