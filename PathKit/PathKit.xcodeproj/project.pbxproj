@@ -207,6 +207,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A60505A62255AE280054356F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A60AA41B220A07B10041C676 /* Angle.swift */,
+				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
+				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A60505A72255AE520054356F /* Curves */ = {
+			isa = PBXGroup;
+			children = (
+				A60AA41D220A0D950041C676 /* Line.swift */,
+				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
+			);
+			path = Curves;
+			sourceTree = "<group>";
+		};
 		A60AA486220BFD640041C676 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,16 +273,13 @@
 		A6FE5B6B21FAAFCB009CD767 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6050565225055350054356F /* Extensions */,
 				9FE96110220D596700D5F0A9 /* PathKit.h */,
-				A60AA41B220A07B10041C676 /* Angle.swift */,
 				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
-				A60AA41D220A0D950041C676 /* Line.swift */,
-				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
 				A605055E225030F90054356F /* Overlap.swift */,
-				A6FE5B6C21FAAFF1009CD767 /* Point.swift */,
-				A6FE5B6E21FAB1A8009CD767 /* Vector.swift */,
+				A60505A62255AE280054356F /* Base */,
+				A60505A72255AE520054356F /* Curves */,
+				A6050565225055350054356F /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
