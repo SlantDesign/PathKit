@@ -74,6 +74,12 @@
 		A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
 		A6050579225055B40054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
 		A605057A225055B70054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
+		A60505AB2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505AC2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505AD2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505AE2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505AF2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505B02255AFCF0054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
@@ -133,6 +139,7 @@
 		A6050566225055450054356F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		A605056A225055770054356F /* ClosedRange+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Extension.swift"; sourceTree = "<group>"; };
 		A605056E225055950054356F /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		A60505AA2255AFC10054356F /* BezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurve.swift; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -222,6 +229,7 @@
 			children = (
 				A60AA41D220A0D950041C676 /* Line.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
+				A60505AA2255AFC10054356F /* BezierCurve.swift */,
 			);
 			path = Curves;
 			sourceTree = "<group>";
@@ -535,6 +543,7 @@
 				9FE9612A220D598700D5F0A9 /* Vector.swift in Sources */,
 				A6FE434A2220D84C007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050567225055450054356F /* Double+Extensions.swift in Sources */,
+				A60505AB2255AFC10054356F /* BezierCurve.swift in Sources */,
 				9FE96128220D598700D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +562,7 @@
 				9FE9612C220D598800D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE9612B220D598800D5F0A9 /* Angle.swift in Sources */,
+				A60505AC2255AFC10054356F /* BezierCurve.swift in Sources */,
 				A6050574225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96130220D598800D5F0A9 /* Vector.swift in Sources */,
 				9FE9612E220D598800D5F0A9 /* LineSegment.swift in Sources */,
@@ -576,6 +586,7 @@
 				9FE96153220D59ED00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43482220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050568225055450054356F /* Double+Extensions.swift in Sources */,
+				A60505AD2255AFC10054356F /* BezierCurve.swift in Sources */,
 				9FE96151220D59ED00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +605,7 @@
 				9FE96155220D59EE00D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96154220D59EE00D5F0A9 /* Angle.swift in Sources */,
+				A60505AE2255AFC10054356F /* BezierCurve.swift in Sources */,
 				A6050575225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */,
 				9FE96157220D59EE00D5F0A9 /* LineSegment.swift in Sources */,
@@ -617,6 +629,7 @@
 				9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050569225055450054356F /* Double+Extensions.swift in Sources */,
+				A60505AF2255AFC10054356F /* BezierCurve.swift in Sources */,
 				9FE9618D220D5AFC00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,6 +648,7 @@
 				A605057A225055B70054356F /* Array+Extension.swift in Sources */,
 				9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96188220D5AFB00D5F0A9 /* Point.swift in Sources */,
+				A60505B02255AFCF0054356F /* BezierCurve.swift in Sources */,
 				A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96189220D5AFB00D5F0A9 /* Vector.swift in Sources */,
 				9FE96186220D5AFB00D5F0A9 /* Line.swift in Sources */,
