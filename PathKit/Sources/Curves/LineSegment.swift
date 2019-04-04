@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A line segment in 2-dimensional space.
 public struct LineSegment: Equatable, ApproximatelyEquatable {
     /// The starting point of `self`.
     public var start: Point
