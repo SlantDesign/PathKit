@@ -8,7 +8,7 @@
 import Foundation
 
 /// A cubic bezier curve in 2-dimensional space.
-public struct BezierCurve {
+public struct CubicBezierCurve {
     /// The starting point of `self`.
     public var start: Point
 
@@ -33,5 +33,29 @@ public struct BezierCurve {
         self.c1 = c1
         self.c2 = c2
         self.end = end
+    }
+}
+
+extension CubicBezierCurve {
+    /// Returns a point along the `self` corresponding to a parameter value within the closed interval [0, 1].
+    ///
+    /// The parameter value `t` is clamped to the closed interval [0, 1].
+    ///
+    /// - Parameter t: The parameter used to calculate the point on the cubic bezier curve.
+    /// - Returns: A point along the line passing through `self`.
+    public func point(at t: Double) -> Point {
+        let t = clamp(t, min: 0, max: 1)
+        let t_2 = t * t
+        let t_3 = t * t * t
+
+        let q = 1 - t
+        let q_2 = q * q
+        let q_3 = q * q_2
+
+        var v = q_3 * Vector(head: start, tail: .zero)
+        v += 3 * q_2 * t * Vector(head: c1, tail: .zero)
+        v += 3 * q * t_2 * Vector(head: c2, tail: .zero)
+        v += t_3 * Vector(head: end, tail: .zero)
+        return Point(x: v.dx, y: v.dy)
     }
 }

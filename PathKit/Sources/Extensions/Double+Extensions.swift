@@ -12,3 +12,13 @@ extension Double: ApproximatelyEquatable {
         return abs(lhs - rhs) < accuracy
     }
 }
+
+public func clamp(_ x: Double, min: Double, max: Double) -> Double {
+    if (x < min) {
+        return min
+    } else if (x > max) {
+        return max
+    } else {
+        return x
+    }
+}
