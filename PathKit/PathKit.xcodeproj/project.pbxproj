@@ -50,6 +50,9 @@
 		9FE9618E220D5AFC00D5F0A9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6C21FAAFF1009CD767 /* Point.swift */; };
 		9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE5B6E21FAB1A8009CD767 /* Vector.swift */; };
 		9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60AA47D220BFCC10041C676 /* VectorTests.swift */; };
+		A601109F2331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */; };
+		A60110A02331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */; };
+		A60110A12331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */; };
 		A605055F225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
 		A6050560225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
 		A6050561225030F90054356F /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605055E225030F90054356F /* Overlap.swift */; };
@@ -74,12 +77,12 @@
 		A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
 		A6050579225055B40054356F /* ClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056A225055770054356F /* ClosedRange+Extension.swift */; };
 		A605057A225055B70054356F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605056E225055950054356F /* Array+Extension.swift */; };
-		A60505AB2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
-		A60505AC2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
-		A60505AD2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
-		A60505AE2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
-		A60505AF2255AFC10054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
-		A60505B02255AFCF0054356F /* BezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* BezierCurve.swift */; };
+		A60505AB2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A60505AC2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A60505AD2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A60505AE2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A60505AF2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A60505B02255AFCF0054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
@@ -135,11 +138,12 @@
 		9FE9613F220D59CD00D5F0A9 /* PathKit_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE9616D220D5AF600D5F0A9 /* PathKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PathKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE96175220D5AF600D5F0A9 /* PathKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezierCurveTests.swift; sourceTree = "<group>"; };
 		A605055E225030F90054356F /* Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap.swift; sourceTree = "<group>"; };
 		A6050566225055450054356F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		A605056A225055770054356F /* ClosedRange+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Extension.swift"; sourceTree = "<group>"; };
 		A605056E225055950054356F /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		A60505AA2255AFC10054356F /* BezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCurve.swift; sourceTree = "<group>"; };
+		A60505AA2255AFC10054356F /* CubicBezierCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezierCurve.swift; sourceTree = "<group>"; };
 		A60AA419220A06410041C676 /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intersection.swift; sourceTree = "<group>"; };
 		A60AA41B220A07B10041C676 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -229,7 +233,7 @@
 			children = (
 				A60AA41D220A0D950041C676 /* Line.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
-				A60505AA2255AFC10054356F /* BezierCurve.swift */,
+				A60505AA2255AFC10054356F /* CubicBezierCurve.swift */,
 			);
 			path = Curves;
 			sourceTree = "<group>";
@@ -242,6 +246,7 @@
 				A6FE434F2220DED8007639FD /* AngleTests.swift */,
 				A6B582EB222767C8005EDD4E /* PointTests.swift */,
 				A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */,
+				A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -543,7 +548,7 @@
 				9FE9612A220D598700D5F0A9 /* Vector.swift in Sources */,
 				A6FE434A2220D84C007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050567225055450054356F /* Double+Extensions.swift in Sources */,
-				A60505AB2255AFC10054356F /* BezierCurve.swift in Sources */,
+				A60505AB2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE96128220D598700D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +560,7 @@
 				A60505642250310A0054356F /* Overlap.swift in Sources */,
 				9FE96131220D599100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE9612D220D598800D5F0A9 /* Line.swift in Sources */,
+				A601109F2331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */,
 				A6FE43492220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050577225055B20054356F /* ClosedRange+Extension.swift in Sources */,
@@ -562,7 +568,7 @@
 				9FE9612C220D598800D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE9612B220D598800D5F0A9 /* Angle.swift in Sources */,
-				A60505AC2255AFC10054356F /* BezierCurve.swift in Sources */,
+				A60505AC2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				A6050574225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96130220D598800D5F0A9 /* Vector.swift in Sources */,
 				9FE9612E220D598800D5F0A9 /* LineSegment.swift in Sources */,
@@ -586,7 +592,7 @@
 				9FE96153220D59ED00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43482220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050568225055450054356F /* Double+Extensions.swift in Sources */,
-				A60505AD2255AFC10054356F /* BezierCurve.swift in Sources */,
+				A60505AD2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE96151220D59ED00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +604,7 @@
 				A6050563225031090054356F /* Overlap.swift in Sources */,
 				9FE9615A220D59F100D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96156220D59EE00D5F0A9 /* Line.swift in Sources */,
+				A60110A02331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */,
 				A6FE43472220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */,
@@ -605,7 +612,7 @@
 				9FE96155220D59EE00D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96154220D59EE00D5F0A9 /* Angle.swift in Sources */,
-				A60505AE2255AFC10054356F /* BezierCurve.swift in Sources */,
+				A60505AE2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				A6050575225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */,
 				9FE96157220D59EE00D5F0A9 /* LineSegment.swift in Sources */,
@@ -629,7 +636,7 @@
 				9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */,
 				A6050569225055450054356F /* Double+Extensions.swift in Sources */,
-				A60505AF2255AFC10054356F /* BezierCurve.swift in Sources */,
+				A60505AF2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE9618D220D5AFC00D5F0A9 /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +648,7 @@
 				A6050579225055B40054356F /* ClosedRange+Extension.swift in Sources */,
 				A6050562225031080054356F /* Overlap.swift in Sources */,
 				9FE96187220D5AFB00D5F0A9 /* LineSegment.swift in Sources */,
+				A60110A12331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6050576225055AF0054356F /* Double+Extensions.swift in Sources */,
 				9FE96185220D5AFB00D5F0A9 /* Intersection.swift in Sources */,
 				A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */,
@@ -648,7 +656,7 @@
 				A605057A225055B70054356F /* Array+Extension.swift in Sources */,
 				9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96188220D5AFB00D5F0A9 /* Point.swift in Sources */,
-				A60505B02255AFCF0054356F /* BezierCurve.swift in Sources */,
+				A60505B02255AFCF0054356F /* CubicBezierCurve.swift in Sources */,
 				A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96189220D5AFB00D5F0A9 /* Vector.swift in Sources */,
 				9FE96186220D5AFB00D5F0A9 /* Line.swift in Sources */,
