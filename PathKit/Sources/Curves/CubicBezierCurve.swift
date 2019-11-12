@@ -36,6 +36,15 @@ public struct CubicBezierCurve {
     }
 }
 
+extension CubicBezierCurve: ApproximatelyEquatable {
+    public static func equal(_ lhs: CubicBezierCurve, _ rhs: CubicBezierCurve, accuracy: Double) -> Bool {
+        return Point.equal(lhs.start, rhs.start, accuracy: accuracy)
+            && Point.equal(lhs.end, rhs.end, accuracy: accuracy)
+            && Point.equal(lhs.c1, rhs.c1, accuracy: accuracy)
+            && Point.equal(lhs.c2, rhs.c2, accuracy: accuracy)
+    }
+}
+
 extension CubicBezierCurve {
     /// Returns a point along the `self` corresponding to a parameter value within the closed interval [0, 1].
     ///
@@ -57,5 +66,40 @@ extension CubicBezierCurve {
         v += 3 * q * t_2 * Vector(head: c2, tail: .zero)
         v += t_3 * Vector(head: end, tail: .zero)
         return Point(x: v.dx, y: v.dy)
+    }
+
+    /// Returns a pair of cubic bezier curves that are obtained by splitting `self` at the point P corresponding
+    /// to a parameter value `t` contained within the closed interval [0, 1].
+    ///
+    /// The parameter value `t` is clamped to the closed interval [0, 1].
+    ///
+    /// - Parameter t: The parameter value used to obtain the point at which to split `self`.
+    /// - Returns: A pair of Bezier curves whose union is equivalent to `self`.
+    public func split(at t: Double) -> (CubicBezierCurve, CubicBezierCurve) {
+        let t = clamp(t, min: 0, max: 1)
+        let q = 1 - t
+
+        let v00 = Vector(head: start, tail: .zero)
+        let v01 = Vector(head: c1, tail: .zero)
+        let v02 = Vector(head: c2, tail: .zero)
+        let v03 = Vector(head: end, tail: .zero)
+        let v10 = q * v00 + t * v01
+        let v11 = q * v01 + t * v02
+        let v12 = q * v02 + t * v03
+        let v20 = q * v10 + t * v11
+        let v21 = q * v11 + t * v12
+        let v30 = q * v20 + t * v21
+
+        let splitPoint = Point(x: v30.dx, y: v30.dy)
+        let curve1 = CubicBezierCurve(start: start,
+                                      c1: Point(x: v10.dx, y: v10.dy),
+                                      c2: Point(x: v20.dx, y: v20.dy),
+                                      end: splitPoint)
+
+        let curve2 = CubicBezierCurve(start: splitPoint,
+                                      c1: Point(x: v21.dx, y: v21.dy),
+                                      c2: Point(x: v12.dx, y: v12.dy),
+                                      end: end)
+        return (curve1, curve2)
     }
 }

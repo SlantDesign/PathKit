@@ -33,4 +33,22 @@ class CubicBezierCurveTests: XCTestCase {
         XCTAssertEqual(curve.point(at: -1), start)
         XCTAssertEqual(curve.point(at: 2), end)
     }
+
+    func testSplit() {
+        let start = Point.zero
+        let c1 = Point(x: 0.0, y: 1.0)
+        let c2 = Point(x: 1.0, y: 1.0)
+        let end = Point(x: 1.0, y: 0)
+        let curve = CubicBezierCurve(start: start, c1: c1, c2: c2, end: end)
+        let splittingPoint = curve.point(at: 0.5)
+        let subCurves = curve.split(at: 0.5)
+
+        XCTAssertEqual(curve.start, subCurves.0.start)
+        XCTAssertEqual(curve.point(at: 0.25), subCurves.0.point(at: 0.5))
+        XCTAssertEqual(splittingPoint, subCurves.0.end)
+
+        XCTAssertEqual(splittingPoint, subCurves.1.start)
+        XCTAssertEqual(curve.point(at: 0.75), subCurves.1.point(at: 0.5))
+        XCTAssertEqual(curve.end, subCurves.1.end)
+    }
 }
