@@ -57,4 +57,52 @@ class LineTests: XCTestCase {
         XCTAssertFalse(line.contains(Point(x: 2.4, y: 10), accuracy: 1.0e-1))
         XCTAssertFalse(line.contains(Point(x: 0, y: 30), accuracy: 1.0e-1))
     }
+
+    func testDistanceHorizontalLine() {
+        var line = Line(angle: Angle.π/2, distanceFromOrigin: 1)
+        XCTAssertEqual(line.distance(to: .zero), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 2, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 3, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -2, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -3, y: 0)), 1, accuracy: 1.0e-13)
+
+        line = Line(angle: 3*Angle.π/2, distanceFromOrigin: 1)
+        XCTAssertEqual(line.distance(to: Point(x: 1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 2, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 3, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -2, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -3, y: 0)), 1, accuracy: 1.0e-13)
+    }
+
+    func testDistanceVerticalLine() {
+        var line = Line(angle: Angle.zero, distanceFromOrigin: 0)
+        XCTAssertEqual(line.distance(to: .zero), 0, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 2, y: 0)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 3, y: 0)), 3, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -2, y: 0)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -3, y: 0)), 3, accuracy: 1.0e-13)
+
+        line = Line(angle: Angle.π, distanceFromOrigin: 0)
+       XCTAssertEqual(line.distance(to: .zero), 0, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 2, y: 0)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 3, y: 0)), 3, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -1, y: 0)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -2, y: 0)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -3, y: 0)), 3, accuracy: 1.0e-13)
+
+        line = Line(angle: Angle.τ, distanceFromOrigin: 0)
+        XCTAssertEqual(line.distance(to: .zero), 0, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 1, y: 3)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 2, y: 3)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: 3, y: 4)), 3, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -1, y: 5)), 1, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -2, y: 6)), 2, accuracy: 1.0e-13)
+        XCTAssertEqual(line.distance(to: Point(x: -3, y: 7)), 3, accuracy: 1.0e-13)
+    }
 }

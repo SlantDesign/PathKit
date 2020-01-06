@@ -83,6 +83,15 @@
 		A60505AE2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
 		A60505AF2255AFC10054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
 		A60505B02255AFCF0054356F /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60505AA2255AFC10054356F /* CubicBezierCurve.swift */; };
+		A64A9C0C23C2E76B0055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
+		A64A9C0D23C2E76B0055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
+		A64A9C0E23C2E76B0055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
+		A64A9C1023C3087D0055012C /* FatLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0F23C3087D0055012C /* FatLineTests.swift */; };
+		A64A9C1123C3087D0055012C /* FatLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0F23C3087D0055012C /* FatLineTests.swift */; };
+		A64A9C1223C3087D0055012C /* FatLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0F23C3087D0055012C /* FatLineTests.swift */; };
+		A64A9C1323C308880055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
+		A64A9C1423C308890055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
+		A64A9C1523C3088A0055012C /* FatLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A9C0B23C2E76B0055012C /* FatLine.swift */; };
 		A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
 		A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B582EB222767C8005EDD4E /* PointTests.swift */; };
@@ -158,6 +167,8 @@
 		A60AA41D220A0D950041C676 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		A60AA47D220BFCC10041C676 /* VectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTests.swift; sourceTree = "<group>"; };
 		A6391FB521FE8B3100CFF71C /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
+		A64A9C0B23C2E76B0055012C /* FatLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatLine.swift; sourceTree = "<group>"; };
+		A64A9C0F23C3087D0055012C /* FatLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatLineTests.swift; sourceTree = "<group>"; };
 		A6B582EB222767C8005EDD4E /* PointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		A6B583E6222DF39D005EDD4E /* LineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTests.swift; sourceTree = "<group>"; };
 		A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegmentTests.swift; sourceTree = "<group>"; };
@@ -253,13 +264,14 @@
 		A60AA486220BFD640041C676 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A6FE434F2220DED8007639FD /* AngleTests.swift */,
+				A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */,
+				A64A9C0F23C3087D0055012C /* FatLineTests.swift */,
+				A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */,
 				A6B583E6222DF39D005EDD4E /* LineTests.swift */,
+				A6B582EB222767C8005EDD4E /* PointTests.swift */,
 				A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */,
 				A60AA47D220BFCC10041C676 /* VectorTests.swift */,
-				A6FE434F2220DED8007639FD /* AngleTests.swift */,
-				A6B582EB222767C8005EDD4E /* PointTests.swift */,
-				A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */,
-				A601109E2331B04600BF91DA /* CubicBezierCurveTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			children = (
 				9FE96110220D596700D5F0A9 /* PathKit.h */,
 				A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */,
+				A64A9C0B23C2E76B0055012C /* FatLine.swift */,
 				A60AA419220A06410041C676 /* Intersection.swift */,
 				A605055E225030F90054356F /* Overlap.swift */,
 				A60505A62255AE280054356F /* Base */,
@@ -560,6 +573,7 @@
 				A605056B225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9612A220D598700D5F0A9 /* Vector.swift in Sources */,
 				A6FE434A2220D84C007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A64A9C0C23C2E76B0055012C /* FatLine.swift in Sources */,
 				A6CAA68E237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050567225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AB2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
@@ -588,7 +602,9 @@
 				A6050574225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96130220D598800D5F0A9 /* Vector.swift in Sources */,
 				9FE9612E220D598800D5F0A9 /* LineSegment.swift in Sources */,
+				A64A9C1323C308880055012C /* FatLine.swift in Sources */,
 				A6050570225055950054356F /* Array+Extension.swift in Sources */,
+				A64A9C1023C3087D0055012C /* FatLineTests.swift in Sources */,
 				A6FE43502220DED8007639FD /* AngleTests.swift in Sources */,
 				A6B583EB222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */,
 			);
@@ -607,6 +623,7 @@
 				A605056C225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE96153220D59ED00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43482220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A64A9C0D23C2E76B0055012C /* FatLine.swift in Sources */,
 				A6CAA68F237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050568225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AD2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
@@ -635,7 +652,9 @@
 				A6050575225055AE0054356F /* Double+Extensions.swift in Sources */,
 				9FE96159220D59EE00D5F0A9 /* Vector.swift in Sources */,
 				9FE96157220D59EE00D5F0A9 /* LineSegment.swift in Sources */,
+				A64A9C1423C308890055012C /* FatLine.swift in Sources */,
 				A6050572225055950054356F /* Array+Extension.swift in Sources */,
+				A64A9C1123C3087D0055012C /* FatLineTests.swift in Sources */,
 				A6FE43512220DED8007639FD /* AngleTests.swift in Sources */,
 				A6B583EC222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */,
 			);
@@ -654,6 +673,7 @@
 				A605056D225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A64A9C0E23C2E76B0055012C /* FatLine.swift in Sources */,
 				A6CAA690237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050569225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AF2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
@@ -682,7 +702,9 @@
 				A6B583E9222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96189220D5AFB00D5F0A9 /* Vector.swift in Sources */,
 				9FE96186220D5AFB00D5F0A9 /* Line.swift in Sources */,
+				A64A9C1523C3088A0055012C /* FatLine.swift in Sources */,
 				9FE96184220D5AFB00D5F0A9 /* Angle.swift in Sources */,
+				A64A9C1223C3087D0055012C /* FatLineTests.swift in Sources */,
 				A6FE43522220DED8007639FD /* AngleTests.swift in Sources */,
 				A6B583ED222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */,
 			);
