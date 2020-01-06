@@ -34,7 +34,13 @@ public struct Line {
     ///   - accuracy: The accuracy used to determine if the point lies on `self`.
     /// - Returns: True if `point` is on `self` within the given accuracy.
     public func contains(_ point: Point, accuracy: Double) -> Bool {
+        return Double.equal(distance(to: point), 0, accuracy: accuracy)
+    }
+
+    /// Returns the shortest distance between `point` and `self`.
+    /// - Parameter point: The point to calculate the distance from.
+    public func distance(to point: Point) -> Double {
         let dotProduct = Vector(head: point, tail: .zero) • Vector.unitVector(with: angle)
-        return Double.equal(dotProduct, distanceFromOrigin, accuracy: accuracy)
+        return abs(dotProduct - distanceFromOrigin)
     }
 }
