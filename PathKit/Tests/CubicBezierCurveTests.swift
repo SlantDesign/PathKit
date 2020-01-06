@@ -51,4 +51,24 @@ class CubicBezierCurveTests: XCTestCase {
         XCTAssertEqual(curve.point(at: 0.75), subCurves.1.point(at: 0.5))
         XCTAssertEqual(curve.end, subCurves.1.end)
     }
+
+    func testLength() {
+        // the arc length of y = x^3 between 0 and 1 is 1.547865 
+        XCTAssertEqual(cubicFunctionApproximation.length(tolerance: 0.0000001), 1.547865, accuracy: 0.000001)
+    }
+
+    func testCubicApproximation() {
+        let cubic = cubicFunctionApproximation
+        for i in stride(from: 0, to: 1, by: 0.001) {
+            XCTAssertEqual(cubic.point(at: i).y, pow(i, 3), accuracy: 0.0000000001)
+        }
+    }
+
+    /// Approximation of y = x^3 from 0 to 1
+    private var cubicFunctionApproximation: CubicBezierCurve {
+        let c1 = Point(x: 1.0/3, y: 0)
+        let c2 = Point(x: 2.0/3, y: 0)
+        let end = Point(x: 1, y: 1)
+        return CubicBezierCurve(start: .zero, c1: c1, c2: c2, end: end)
+    }
 }

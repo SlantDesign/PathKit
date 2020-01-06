@@ -14,6 +14,10 @@ class LineSegmentTests: XCTestCase {
         let l1 = LineSegment(start: p1, end: p2)
         let l2 = LineSegment(start: p2, end: p1)
         XCTAssert(l1.length == l2.length)
+
+
+        let l = LineSegment(start: .zero, end: .zero)
+        XCTAssert(l.length == 0)
     }
 
     func testIntersection() {
