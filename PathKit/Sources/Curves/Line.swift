@@ -40,7 +40,13 @@ public struct Line {
     /// Returns the shortest distance between `point` and `self`.
     /// - Parameter point: The point to calculate the distance from.
     public func distance(to point: Point) -> Double {
+        return abs(signedDistance(to: point))
+    }
+
+    /// Returns the (shortest) signed distance between `point` and `self`.
+    /// - Parameter point: The point to calculate the distance from.
+    public func signedDistance(to point: Point) -> Double {
         let dotProduct = Vector(head: point, tail: .zero) • Vector.unitVector(with: angle)
-        return abs(dotProduct - distanceFromOrigin)
+        return dotProduct - distanceFromOrigin
     }
 }
