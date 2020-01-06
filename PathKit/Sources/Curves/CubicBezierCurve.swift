@@ -102,4 +102,29 @@ extension CubicBezierCurve {
                                       end: end)
         return (curve1, curve2)
     }
+
+    /// Returns an approximation of the length of `self`.
+    /// - Parameter tolerance: The maximum allowable error of the computed length.
+    func length(tolerance: Double) -> Double {
+        let controlPolygonLength = controlPolygon.length
+        let chordLength = chord.length
+        let error = abs(controlPolygonLength - chordLength)
+        if error < tolerance {
+            return (chordLength + controlPolygonLength) * 0.5
+        }
+
+        let (b1, b2) = split(at: 0.5)
+        let newTolerance = tolerance * 0.5
+        return b1.length(tolerance: newTolerance) + b2.length(tolerance: newTolerance)
+    }
+
+    /// The control polygon of `self`.
+    var controlPolygon: Polyline {
+        return Polyline(vertices: [start, c1, c2, end])
+    }
+
+    /// The line segment joining the start point and end point of `self`.
+    var chord: LineSegment {
+        return LineSegment(start: start, end: end)
+    }
 }

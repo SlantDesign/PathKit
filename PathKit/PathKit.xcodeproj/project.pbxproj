@@ -92,6 +92,15 @@
 		A6B583EB222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */; };
 		A6B583EC222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */; };
 		A6B583ED222E0CCA005EDD4E /* LineSegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */; };
+		A6CAA68E237A2F9000BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA68F237A2F9000BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA690237A2F9000BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA691237A2F9D00BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA692237A2F9D00BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA693237A2F9E00BA1A32 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA68D237A2F9000BA1A32 /* Polyline.swift */; };
+		A6CAA697237A37B800BA1A32 /* PolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */; };
+		A6CAA698237A37B800BA1A32 /* PolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */; };
+		A6CAA699237A37B900BA1A32 /* PolylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */; };
 		A6FE425E221A0645007639FD /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */; };
 		A6FE43442220D576007639FD /* PathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE96110220D596700D5F0A9 /* PathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,6 +161,8 @@
 		A6B582EB222767C8005EDD4E /* PointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		A6B583E6222DF39D005EDD4E /* LineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTests.swift; sourceTree = "<group>"; };
 		A6B583EA222E0CCA005EDD4E /* LineSegmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegmentTests.swift; sourceTree = "<group>"; };
+		A6CAA68D237A2F9000BA1A32 /* Polyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
+		A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineTests.swift; sourceTree = "<group>"; };
 		A6F885C121F79C6700FFC5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FE433E2220C6A6007639FD /* ApproximatelyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproximatelyEquatable.swift; sourceTree = "<group>"; };
 		A6FE434F2220DED8007639FD /* AngleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleTests.swift; sourceTree = "<group>"; };
@@ -234,6 +245,7 @@
 				A60AA41D220A0D950041C676 /* Line.swift */,
 				A6391FB521FE8B3100CFF71C /* LineSegment.swift */,
 				A60505AA2255AFC10054356F /* CubicBezierCurve.swift */,
+				A6CAA68D237A2F9000BA1A32 /* Polyline.swift */,
 			);
 			path = Curves;
 			sourceTree = "<group>";
@@ -242,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B583E6222DF39D005EDD4E /* LineTests.swift */,
+				A6CAA696237A37AE00BA1A32 /* PolylineTests.swift */,
 				A60AA47D220BFCC10041C676 /* VectorTests.swift */,
 				A6FE434F2220DED8007639FD /* AngleTests.swift */,
 				A6B582EB222767C8005EDD4E /* PointTests.swift */,
@@ -547,6 +560,7 @@
 				A605056B225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9612A220D598700D5F0A9 /* Vector.swift in Sources */,
 				A6FE434A2220D84C007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA68E237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050567225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AB2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE96128220D598700D5F0A9 /* LineSegment.swift in Sources */,
@@ -563,8 +577,10 @@
 				A601109F2331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6B582ED222767E8005EDD4E /* PointTests.swift in Sources */,
 				A6FE43492220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA691237A2F9D00BA1A32 /* Polyline.swift in Sources */,
 				A6050577225055B20054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9612F220D598800D5F0A9 /* Point.swift in Sources */,
+				A6CAA697237A37B800BA1A32 /* PolylineTests.swift in Sources */,
 				9FE9612C220D598800D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E7222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE9612B220D598800D5F0A9 /* Angle.swift in Sources */,
@@ -591,6 +607,7 @@
 				A605056C225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE96153220D59ED00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43482220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA68F237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050568225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AD2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE96151220D59ED00D5F0A9 /* LineSegment.swift in Sources */,
@@ -607,8 +624,10 @@
 				A60110A02331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6B582EE222767E9005EDD4E /* PointTests.swift in Sources */,
 				A6FE43472220D84B007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA692237A2F9D00BA1A32 /* Polyline.swift in Sources */,
 				A6050578225055B30054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE96158220D59EE00D5F0A9 /* Point.swift in Sources */,
+				A6CAA698237A37B800BA1A32 /* PolylineTests.swift in Sources */,
 				9FE96155220D59EE00D5F0A9 /* Intersection.swift in Sources */,
 				A6B583E8222DF39D005EDD4E /* LineTests.swift in Sources */,
 				9FE96154220D59EE00D5F0A9 /* Angle.swift in Sources */,
@@ -635,6 +654,7 @@
 				A605056D225055770054356F /* ClosedRange+Extension.swift in Sources */,
 				9FE9618F220D5AFC00D5F0A9 /* Vector.swift in Sources */,
 				A6FE43432220C6A6007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA690237A2F9000BA1A32 /* Polyline.swift in Sources */,
 				A6050569225055450054356F /* Double+Extensions.swift in Sources */,
 				A60505AF2255AFC10054356F /* CubicBezierCurve.swift in Sources */,
 				9FE9618D220D5AFC00D5F0A9 /* LineSegment.swift in Sources */,
@@ -651,8 +671,10 @@
 				A60110A12331B04600BF91DA /* CubicBezierCurveTests.swift in Sources */,
 				A6050576225055AF0054356F /* Double+Extensions.swift in Sources */,
 				9FE96185220D5AFB00D5F0A9 /* Intersection.swift in Sources */,
+				A6CAA693237A2F9E00BA1A32 /* Polyline.swift in Sources */,
 				A6B582EF222767EA005EDD4E /* PointTests.swift in Sources */,
 				A6FE43462220D84A007639FD /* ApproximatelyEquatable.swift in Sources */,
+				A6CAA699237A37B900BA1A32 /* PolylineTests.swift in Sources */,
 				A605057A225055B70054356F /* Array+Extension.swift in Sources */,
 				9FE96190220D5AFF00D5F0A9 /* VectorTests.swift in Sources */,
 				9FE96188220D5AFB00D5F0A9 /* Point.swift in Sources */,
